@@ -1,4 +1,6 @@
-### [javascript object](#index)
+[TOC]
+
+### javascript Object
 ---
 - 키는 문자열만 가능.
 속성명은 따옴표가 없어도 된다(있어도 상관없다. 띄어쓰기가 있을경우 따옴표로 감싸기).
@@ -14,7 +16,7 @@ ex) var wrap = {'ex ample' : 'wrap' }
 
 
 
-### [javascript function](#index)
+### javascript Function
 ---
 - 속성값으로 사용되는 함수를 '메소드'라고 부른다.  
 - 값으로 사용되는 함수를, '1급 함수'라고 부른다. (자바스크립트는 1급 함수를 사용하는 언어)
@@ -68,4 +70,10 @@ var moduleJs = require('node.circle.js');	//로드되는 대상
 
 ### API와 UI
 ---
+- UI(user interface), API(Application Programming interface)
+- alert창조차, 웹브라우저를 제어하기 위한 interface.(사용자 interface와 구분하기 위해 api라고 부른다.)
+- 개발자는 api를 이용해 브라우저 웹 플랫폼을 제어하게 됨.
+브라우저 (플랫폼 ), 브라우저 api(운영체제가 제공하는 api)를 이용해서 개발(운영프로그램 개발)
+- 프로그래밍을 공부하기 위한 자료는 크게 레퍼런스(reference)와 tutorial(안내서)가 있다.
+- 자바스크립트가 동작하는 호스트환경의 api (호스트환경이란??)
 

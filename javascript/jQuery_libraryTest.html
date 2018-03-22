@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	<ul id="list">
+		<li>empty</li>
+		<li>empty</li>
+		<li>empty</li>
+		<li>empty</li>
+	</ul>
+	<input type="button" value="execute" id="execute_btn">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+<script>
+	//JQUERY가 아니라 직접만들면 더 오래걸린다.
+	$("#execute_btn").click(function(){
+		$("#list li").text('coding everybody');
+	});
+</script>
+</body>
+</html>

@@ -1,28 +1,24 @@
+## Exception handling
+- 1. 에러 발생시 redis로 다시 생성 요청 ==> 이때의 데이터를 모르겠다.
+- 2. 생성 요청시 객체에 retry횟수 증가후 보낸다. ?  
+	==> 은행같은곳에서 비번 입력후 5회 이상 인증 실패하면 계정 잠기고,, 뭐 어디연락하라고 처리하는것처럼.  
+	이 서비스에도 create address를 하는데 그런 처리를 해둔거임.    
+	- 3. 특정 횟수에 도달하면 에러 메세지를 redis로 publish한다.  
+- 4. 횟수에 도달전에는 다시 한번 요청한 정보를 통해서 주소가 생성되었는지 확인하고 재요청을 할것인지 결정한다.  
 
-
-1. 에러 발생시 redis로 다시 생성 요청 ==> 이때의 데이터를 모르겠다.
-
-2. 생성 요청시 객체에 retry횟수 증가후 보낸다. ?
-	==> 은행같은곳에서 비번 입력후 5회 이상 인증 실패하면 계정 잠기고,, 뭐 어디연락하라고 처리하는것처럼.
-	이 서비스에도 create address를 하는데 그런 처리를 해둔거임.
-	
-3. 특정 횟수에 도달하면 에러 메세지를 redis로 publish한다.
-
-4. 횟수에 도달전에는 다시 한번 요청한 정보를 통해서 주소가 생성되었는지 확인하고 재요청을 할것인지 결정한다.
-
-ICO-Server에서 rightpush로 큐데이터를 던져줌
-WalletService - leftpop으로 큐데이터 꺼내옴.
-
+#### @value의 Properties값 설정
+- ICO-Server에서 **rightpush**로 큐데이터를 던져줌 ==> WalletService - **leftpop**으로 큐데이터 꺼내옴.
 - walletService에서 아래의 프로퍼티값을 사용하도록 설정해놓았다.
 
-@Value("${redis.queue.key}")
+> @Value("${redis.queue.key}")
 private String REDIS_QUEUE_KEY;	//dc:create:address ??
 	
-@Value("${redis.retry}")
+> @Value("${redis.retry}")
 private Integer REDIS_QUEUE_RETRY; //5
 	
 	
-	
+
+```	
 	// 에러가 발생했을 경우, requestCreateWalletInfo를 다시 retry로 메세지를 보낸다.
 try {
 	// json String convert Object
@@ -70,3 +66,5 @@ try {
 // 이미 다른 클러스터링 되고 있는 다른 노드 서비스에서, 푸시된 큐 메세지?키를?가지고 갔다면, 아래의 메세지를 던져준다.
 			LOG.info("Already Queue is Pop by Other Node!!!!!");
 }
+
+```

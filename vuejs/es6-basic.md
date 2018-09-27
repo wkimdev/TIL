@@ -342,7 +342,7 @@ arr.forEach(value => console.log(value)); // a,b,c
 var arr = [1,2,3];
 
 arr.forEach(function(value) { console.log(value); });
-
+   
 arr.forEach((value) => console.log(value); )
 
 # ¿¬½À 2

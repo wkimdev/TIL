@@ -58,7 +58,7 @@ OS name: "mac os x", version: "10.13.5", arch: "x86_64", family: "mac"
 - spring boot profile 분리  
 - 개발옵션 : `mvn spring-boot:run -Dspring.profiles.active=dev;` 실행
 - 로컬옵션 : `mvn spring-boot:run -Dspring.profiles.active=local;` 실행
-
+   
 ## 발생했던 에러 메세지
 - E325: ATTENTION Found a swap file by the name ".profile.swp"()
 - vi는 파일을 열면 스왑 파일을 만듭니다. 편집을 종료되면 스왑 파일을 삭제하고요. 스왑 파일이 이미 존재하기 때문에 나오는 메시지

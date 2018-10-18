@@ -63,9 +63,14 @@ OS name: "mac os x", version: "10.13.5", arch: "x86_64", family: "mac"
 - E325: ATTENTION Found a swap file by the name ".profile.swp"()
 - vi는 파일을 열면 스왑 파일을 만듭니다. 편집을 종료되면 스왑 파일을 삭제하고요. 스왑 파일이 이미 존재하기 때문에 나오는 메시지
 - https://kldp.org/node/116058
-- 
 
 ## bash란?
+- - 본 어게인 셸(Bourne-again shell) : 유닉스에서 사용하는 커맨드 셸의 일종.
+- 일반적으로 bash로 줄여 부른다.
+- 도스에서 command.com 셸이 사용자의 명렁어(DIR 같은..)를 받아 특정 행동을 수행해주는 것 과 같이, 사용자의 특정 명령어를 받아 OS한테 명령을 요청하는 것.
+- 참고로 shell에서 export 명령어는 환경변수를 지정하는 명령어.
+
+
 
 ## 참고 블로그
 - https://zeddios.tistory.com/122

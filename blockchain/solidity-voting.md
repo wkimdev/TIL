@@ -31,7 +31,7 @@ contract Vote {
 	
     
     // modifier (votingÀ» ¾Æ¹«³ª ²ø ¼ö ¾ø°Ô²û)
-	modifier onlyOwner {
+	modifier onlyOwner {  
 		require(msg.sender == owner);
 		_;
 	}

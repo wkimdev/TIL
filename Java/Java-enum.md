@@ -23,7 +23,7 @@
 	ETHER("ether", 18);	
 	public String name;
 	public BigDecimal weiFactor;
-
+  
 	//UNUTCODE가 ETHER상수로서 받아들여진다???
 	UnitCode(String name, int factor) {
         this.name = name;

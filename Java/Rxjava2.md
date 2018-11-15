@@ -13,7 +13,10 @@
 - 교실에서 떠든다. 선생님이 온다. 선생님이 오는걸 말해주는 사람이 필요하다/
 - Observable은 주로 푸시(배출)를 기반으로 하는 성격을 지닌다.
 
+
 - 소켓이랑 뭐가 다른거지??? ..
+- https://stackoverflow.com/questions/29390172/whats-difference-between-a-callback-and-observer-pattern-in-java
+- https://stackoverflow.com/questions/36213948/what-is-the-difference-between-asynchronous-calls-and-callbacks
 
 ## Observer Design pattern 
 - ![imagme]

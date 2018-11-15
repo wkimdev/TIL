@@ -12,7 +12,12 @@
 - Maybe클래스는 reduce()함수나 firstElement()함수와 같이 데이터가 발행 될 수 있거나 혹은 발행되지 않고도 완료되는 경우를 의미
 - 교실에서 떠든다. 선생님이 온다. 선생님이 오는걸 말해주는 사람이 필요하다/
 - Observable은 주로 푸시(배출)를 기반으로 하는 성격을 지닌다.
- 
+
+- 소켓이랑 뭐가 다른거지??? ..
+
+## Observer Design pattern 
+- ![imagme]
+
 
 ## Flowable
 - Flowable클래스는 Observable에서 데이터가 발행되는 속도가 구독자가 처리하는 속도보다 현저하게 빠른 경우 배압이슈에 대응하는 기능을 추가로 제공한다.
@@ -22,9 +27,6 @@
 - Flowable은 시스템 매개 변수 rx2.buffer-size를 통해 전역 적으로 재정의 될 수있는 bufferSize ()를 통해 액세스 할 수있는 연산자에 대한 128 개 요소의 기본 버퍼 크기를 호스팅합니다. 
 - 그러나 대부분의 연산자에는 내부 버퍼 크기를 명시 적으로 설정할 수있는 오버로드가 있습니다.
 
-```
-
-```
 
 ## subscribe()
 - .subscribe()에 실행할 메소드를 넣어주면 된다. 
@@ -70,6 +72,7 @@ Flowable<TransferHistory> flowable = database.select("SELECT * FROM TABLES WHERE
                   .parameter(params)
                   .autoMap(TransferHistory.class);
 ```
+
 
 
 #### 출처

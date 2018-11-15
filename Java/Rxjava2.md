@@ -18,9 +18,17 @@
 - https://stackoverflow.com/questions/29390172/whats-difference-between-a-callback-and-observer-pattern-in-java
 - https://stackoverflow.com/questions/36213948/what-is-the-difference-between-asynchronous-calls-and-callbacks
 
-## Observer Design pattern 
+## Observer Design pattern   
 - ![imagme]
-
+  
+## 옵서버 패턴(observer pattern)  
+- 한 객체의 상태가 바뀌면, 그 객체를 의존하는 다른 객체들한테 연락이 가고 자동으로 내용이 갱신되는 방식.
+- 일대다(one-to-many) 의존성을 정의한다. 
+- 객체의 상태 변화를 관찰하는 관찰자들, 즉 옵저버들의 목록을 객체에 등록하여 상태 변화가 있을 때마다 메서드 등을 통해 객체가 직접 목록의 각 옵저버에게 통지하도록 하는 디자인 패턴이다. 주로 분산 이벤트 핸들링 시스템을 구현하는 데 사용된다. 발행/구독 모델로 알려져 있기도 하다.
+- 데이터 전달방식은 2가지가 있다.    
+  
+>  1. 주제객체에서 옵저버로 데이터를 보내는 방식(푸시 방식)  
+>  2. 옵저버에서 주제객체의 데이터를 가져가는 방식 (풀 방식)
 
 ## Flowable
 - Flowable클래스는 Observable에서 데이터가 발행되는 속도가 구독자가 처리하는 속도보다 현저하게 빠른 경우 배압이슈에 대응하는 기능을 추가로 제공한다.

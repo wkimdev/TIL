@@ -65,7 +65,11 @@
 - 비동기, reactive 라고 볼 수 있음.
 
 
-## 소스구조
+## 소스구조  
+
+  
+  
+```
 src
 │   ├── main
 │   │   ├── java
@@ -96,6 +100,7 @@ src
 │                   └── test
 │                       └── ServiceTest.java    
 
+```
 
 ## Reference
 - https://dzone.com/articles/spring-webflux-a-basic-crud-application-part-1

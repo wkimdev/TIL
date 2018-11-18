@@ -4,7 +4,8 @@
 - 이벤트를 정의한 'Observable' 인스턴스에 대해 짧은 함수를 엮은(체인) 스트림같이 이벤트 결과 데이터를 가공하는 처리를 정의, 지연실행, 비동기 콜백을 할수있습니다.
 
 ## Observable
-- Observable = reactive stream
+- Observable = reactive stream.
+- 비동기 방식으로 전달되는 데이터 추상화.
 - 옵저버블, 옵설버블 등으로 읽는다. RxJava뿐만 아니라 리액티브 프로그래밍의 기본적인 모델이다. 
 - 일단 여기(Observable)에 넣고 처리한다고 생각 하면 된다. 
 - 마치 스프링이 일단은 ApplicationContext에 모든 빈을 넣고 시작하는것과 비슷하다고 보면 된다.

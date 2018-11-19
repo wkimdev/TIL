@@ -33,12 +33,19 @@
 >  2. 옵저버에서 주제객체의 데이터를 가져가는 방식 (풀 방식)
 
 ## Flowable
-- Flowable클래스는 Observable에서 데이터가 발행되는 속도가 구독자가 처리하는 속도보다 현저하게 빠른 경우 배압이슈에 대응하는 기능을 추가로 제공한다.
+- Flowable클래스는 Observable에서 데이터가 발행되는 속도가 구독자가 처리하는 속도보다 현저하게 빠른 경우 배압이슈(back pressure)에 대응하는 기능을 추가로 제공한다.
+- 간단하게 말해서, 배압(Back pressure)를 해결 하기 위해 flowable(RxJava2부터 도입)을 했다. 
 - Reactive-Streams Pattern을 구현하고, 팩토리 메소드, 중개 연산자 및 반응적인 데이터 플로우를 사용할 수있는 기능을 제공하는클래스
 - Reactive-Streams는 Flowable이 확장 된 Publishers와 함께 작동합니다. 
 - 따라서 많은 운영자가 일반 게시자를 직접 수용하고 다른 Reactive-Streams 구현과 직접 상호 운용 할 수 있습니다.
 - Flowable은 시스템 매개 변수 rx2.buffer-size를 통해 전역 적으로 재정의 될 수있는 bufferSize ()를 통해 액세스 할 수있는 연산자에 대한 128 개 요소의 기본 버퍼 크기를 호스팅합니다. 
 - 그러나 대부분의 연산자에는 내부 버퍼 크기를 명시 적으로 설정할 수있는 오버로드가 있습니다.
+
+- flowable  --> backpressure --> producer (1초당 1000항목을 생성, 초당 100항목을 처리할 수 있는 )
+- Observable produces 1_000_000 items per second how a subscriber which can handle only 100 items per second does process the items? 
+- 초당 1000개 항목을 생성(produce), subscribe는 초당 100개 밖에 처리할 수 없음. 이것에 대해?
+- 출처[]
+- https://proandroiddev.com/rxjava-backpressure-and-why-you-should-care-369c5242c9e6
 
 
 ## subscribe()

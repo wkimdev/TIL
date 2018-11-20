@@ -1,0 +1,35 @@
+# intro
+## 자바의 비동기처리?
+## 쓰레드, 그게 뭔데?
+## 블로킹, 넌블로킹?
+
+# series 1
+## 공부하게된 히스토리
+- 회사에서 과장님이 서버개발 스터디 시작~
+
+## 리액티브 자바란?
+## 옵저버 패턴이란?
+## functional programming
+## 사용이유?
+#### 사용배경
+#### 사용장점
+
+# series 2 (정리를 위함이기 때문에 너무 디테일하게는 가지 않는다)
+## obserable
+## why interface?
+## flawable??
+## flux, mono (스트림이 합쳐져서 모노, 모노가 합쳐져서 이게 플럭스, 그리고 이게 리액트.! 옵저버블 패턴! ~~?)
+## 그래서 webflux는 뭔데?
+
+# series 3
+## webflux만 따로
+## serverResponse, serverRequest
+
+# series 4
+## 간단한 플젝
+#### tech stack (maven depengency, 각각의 version etc..)
+#### 구현하고자 한것.
+- 블록체인과 연결시켜야함.
+
+* java8 부터 인터페이스도 메소드 생성가능함.~(원래 안되는 것..? ㅠㅠ....)
+* webflux가 spring boot 5 부터 지원?(그래서 junit 5 를 쓰는..?!)

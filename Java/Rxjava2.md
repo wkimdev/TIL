@@ -3,6 +3,27 @@
 - reactive streams는 java 8+에 친화적
 - 이벤트를 정의한 'Observable' 인스턴스에 대해 짧은 함수를 엮은(체인) 스트림같이 이벤트 결과 데이터를 가공하는 처리를 정의, 지연실행, 비동기 콜백을 할수있습니다.
 
+## why??
+- 리액프 프로그래밍이 필요해진 배경
+- https://blog.redelastic.com/what-is-reactive-programming-bc9fa7f4a7fc
+- 하드웨어, 인터넷의 발전때문.
+- 1999년 2억 8천만명의 인터넷 사용자, 온라인 뱅킹 초기 단계   
+- --> 2005년 10억명의 인터넷 사용자. 550만명 페이스북 사용자, 유투브 신생사(2005년 2월), 트위터 2006년, netflix는 아직 비디오 스트리밍 도입 하지 않을 시기...
+- --> 2014년 페이스북 **13억 사용자, 트위터 2억 7천만 사용자 .**
+- 많은 양의 트래픽을 처리할 수 있도록 인터넷이 발전할 수 밖에 없었음.
+ 
+## reactive한 프로그래밍의 특징?(의역, 다시 쓰기)
+- responsive
+- resilient
+- scalable
+- message-driven (비동기적)
+
+## web-flux
+- spring webflux는 비동기-논블록킹 리액티브 개발을 할 수 있다. 
+- spring framework 5의 webflux에 대한 좋은글..
+- https://hyungjoon6876.github.io/jlog/2018/07/12/spring5-webflux-start.html
+
+
 ## Observable
 - Observable = reactive stream.  
 - 비동기 방식으로 전달되는 데이터 추상화.

@@ -3,6 +3,7 @@
 - reactive streams는 java 8+에 친화적
 - 이벤트를 정의한 'Observable' 인스턴스에 대해 짧은 함수를 엮은(체인) 스트림같이 이벤트 결과 데이터를 가공하는 처리를 정의, 지연실행, 비동기 콜백을 할수있습니다.
 
+
 ## why??
 - 리액프 프로그래밍이 필요해진 배경
 - https://blog.redelastic.com/what-is-reactive-programming-bc9fa7f4a7fc
@@ -17,6 +18,10 @@
 - resilient
 - scalable
 - message-driven (비동기적)
+- 리액티브 선언문 : https://www.reactivemanifesto.org/ko
+- 리액티브 좋은 슬라이드  :http://mobicon.tistory.com/467
+- 옵져버블 좋은 슬라이드 --> 
+- https://www.slideshare.net/ssusercaf078?utm_campaign=profiletracking&utm_medium=sssite&utm_source=ssslideview
 
 ## web-flux
 - spring webflux는 비동기-논블록킹 리액티브 개발을 할 수 있다. 
@@ -53,6 +58,8 @@
 >  1. 주제객체에서 옵저버로 데이터를 보내는 방식(푸시 방식)  
 >  2. 옵저버에서 주제객체의 데이터를 가져가는 방식 (풀 방식)
 
+- http://hyeonstorage.tistory.com/165
+
 ## Flowable
 - Flowable클래스는 Observable에서 데이터가 발행되는 속도가 구독자가 처리하는 속도보다 현저하게 빠른 경우 배압이슈(back pressure)에 대응하는 기능을 추가로 제공한다.
 - 간단하게 말해서, 배압(Back pressure)를 해결 하기 위해 flowable(RxJava2부터 도입)을 했다. 
@@ -67,6 +74,11 @@
 - 초당 1000개 항목을 생성(produce), subscribe는 초당 100개 밖에 처리할 수 없음. 이것에 대해?
 - 출처[]
 - https://proandroiddev.com/rxjava-backpressure-and-why-you-should-care-369c5242c9e6
+
+## backpressure??
+- https://proandroiddev.com/rxjava-backpressure-and-why-you-should-care-369c5242c9e6
+- http://eyeahs.github.io/rxjava/blog/2016/10/11/rxjava-wiki-backpressure/
+- http://javaexpert.tistory.com/811?category=678737
 
 
 ## subscribe()
@@ -114,8 +126,54 @@ Flowable<TransferHistory> flowable = database.select("SELECT * FROM TABLES WHERE
                   .autoMap(TransferHistory.class);
 ```
 
+## Webflux(Spring WebFlux)
+- 큰 도움 받은 블로그  ==> https://hyungjoon6876.github.io/jlog/2018/07/12/spring5-webflux-start.html
+- spring webflux는 비동기-논블록킹 리엑티브 개발을 할 수 있다. 
+- **효율적으로 동작하는 고성능 웹 어플리케이션을 개발할 수 있는 서비스간 호출이 많은 마이크로서비스 아키텍처에 적합한 프레임워크**
+- Undertow
+- serverResponse, serverReqeuest에 대한 키워드도 webflux와 연관...
+- spring webflux 예제 ==> 아래 글 필히 읽어볼 것!!
+- http://hojak99.tistory.com/463  
+- 아래는 reactive system에 대한 글.(정리하는데 목차 도움받기!)
+- http://hojak99.tistory.com/453 
+
+## mock test란 무엇인가? 왜 이렇게 부르지??
+- https://medium.com/@SlackBeck/mock-object%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-85159754b2ac
+- http://hyper-cube.io/2017/08/06/spring-boot-test-1/
+- http://egloos.zum.com/kingori/v/4169398
+
+
+## 히카리디비 커넥션풀 ??
+- 도큐먼트 서칭해봄 : 
+- (스프링 HikariCP (커넥션풀) 적용 ) https://gs.saro.me/dev?page=10&tn=450
+- http://jeong-pro.tistory.com/162
+- 고민해본 문제.. ==> [Thinking behind decision of database connection pool size](https://stackoverflow.com/questions/8753442/thinking-behind-decision-of-database-connection-pool-size)
+
+
+- fka
+
+## spring webflu toy proejct 기반!!!
+- [Spring Webflux: A Basic CRUD Application (Part 1)](https://dzone.com/articles/spring-webflux-a-basic-crud-application-part-1)
+
 
 
 #### 출처
+- http://reactivex.io/
 - http://krksap.tistory.com/1189
 - [[RxJava2] 배압(Backpressure) 이란 무엇인가.](http://javaexpert.tistory.com/809)
+- 영문글(webflux와 rxjava2-jdbc 설명) https://medium.com/netifi/spring-webflux-and-rxjava2-jdbc-83a94e71ba04
+- [Java 9의 새로운 기능 : 리 액티브 스트림](https://aboullaite.me/java-9-new-features-reactive-streams/)
+- https://dzone.com/articles/5-things-to-know-about-reactive-programming
+- https://medium.com/@ggikko/rxjava-2-x-%EC%97%90-%EB%8C%80%ED%95%9C-%EC%83%9D%EA%B0%81-e11c7ca008d1
+- flowable과 observable의 차이https://01010011.blog/2017/03/29/rxjava-flowable-%EA%B3%BC-observable-%EC%9D%98-%EC%B0%A8%EC%9D%B4/
+
+## notice
+- 멈추지 않고 기다리기(Non-blocking)와 비동기(Asynchronous) 그리고 동시성(Concurrency)(https://tech.peoplefund.co.kr/2017/08/02/non-blocking-asynchronous-concurrency.html)
+- observable 알고가기 (http://jepark-diary.tistory.com/49)
+- [네트워크] 블로킹과 논블로킹 메커니즘(https://12bme.tistory.com/231)
+- [스레드풀!! 왜 쓰냐] (http://limkydev.tistory.com/55)
+- 프로듀서-컨슈머 패턴 (http://byplacebo.tistory.com/18)
+- 핫 , 콜드.. http://javaexpert.tistory.com/794?category=678737
+- (Java-NIO는-생각만큼-non-blocking-하지-않다/)https://homoefficio.github.io/2016/08/06/Java-NIO%EB%8A%94-%EC%83%9D%EA%B0%81%EB%A7%8C%ED%81%BC-non-blocking-%ED%95%98%EC%A7%80-%EC%95%8A%EB%8B%A4/
+- 스레드때문에 찾아봤던 --> http://mygumi.tistory.com/154 (노드.js와 자바의 차이)
+

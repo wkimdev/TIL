@@ -93,6 +93,21 @@ Status: Downloaded newer image for ubuntu:16.04
 #### redis container 생성
 - redis에 접속하여 새로운 키를 저장하고 불러오는데 성공했습니다. 
 - 실행이 간단한건 물론이고 호스트의 포트만 다르게 하면 하나의 서버에 여러개의 redis 서버를 띄우는 것도 매우 간단합니다.
+- 아래에서 키까지 생성한걸 확인할 수 있다.
+- `$ docker run -d -p 1234:6379 redis`  
+```
+Unable to find image 'redis:latest' locally
+latest: Pulling from library/redis
+a5a6f2f73cd8: Already exists 
+a6d0f7688756: Pull complete 
+53e16f6135a5: Pull complete 
+78a675d939ba: Pull complete 
+91255f6fabf6: Pull complete 
+4ea832befeee: Pull complete 
+Digest: sha256:19f4621c085cb7df955f30616e7bf573e508924cff515027c1dd041f152bb1b6
+Status: Downloaded newer image for redis:latest
+27aabc9732e67ee77f90dcbbc78c7d791559dd0970f8467f9e13e442f34bd696
+```
 
 
 

@@ -61,6 +61,10 @@
 - http://hyeonstorage.tistory.com/165
 
 ## Flowable
+- Flowable은 Observable과 거의 비슷한데 다른 점이 back pressure이 지원된다는 점이다. 
+- back pressure이란 데이터의 처리 순서를 보장해주는 로직이다. 
+- Observable은 back pressure가 보장되지 않아 아이템이 순서대로 발행된다고 보장되지 않는다. 
+- 하지만 Flowable은 보장된다. 따라서 Observable 보단 Flowable을 사용하는 걸 권장한다. 
 - Flowable클래스는 Observable에서 데이터가 발행되는 속도가 구독자가 처리하는 속도보다 현저하게 빠른 경우 배압이슈(back pressure)에 대응하는 기능을 추가로 제공한다.
 - 간단하게 말해서, 배압(Back pressure)를 해결 하기 위해 flowable(RxJava2부터 도입)을 했다. 
 - Reactive-Streams Pattern을 구현하고, 팩토리 메소드, 중개 연산자 및 반응적인 데이터 플로우를 사용할 수있는 기능을 제공하는클래스

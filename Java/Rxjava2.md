@@ -27,7 +27,7 @@
 - spring webflux는 비동기-논블록킹 리액티브 개발을 할 수 있다. 
 - spring framework 5의 webflux에 대한 좋은글..
 - https://hyungjoon6876.github.io/jlog/2018/07/12/spring5-webflux-start.html
-
+- just, mono?!
 
 ## Observable
 - Observable = reactive stream.  

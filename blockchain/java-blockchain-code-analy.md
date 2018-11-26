@@ -89,3 +89,31 @@ const getAdjustedDifficulty = (latestBlock: Block, aBlockchain: Block[]) => {
 ```
 
 - 블럭이름 바꾸기
+
+## timestamp를 통해서 정상적인 난이도를 거쳤는지 체크한다.
+- timestamp를 이용하면 정상적인 난이도를 거쳤는지 체크할 수 있다.
+- 출처 : https://bitcoin.stackexchange.com/questions/68653/the-role-of-timestamp
+- 타임 스탬프는 주로 '난이도를 설정'하는 데 사용됩니다. 
+- 타임 스탬프가 없으면 새로운 노드는 각 블록을 채취하는 데 걸리는 시간을 알 수 없으므로 각 2016 블록 기간에 사용할 올바른 어려움을 결정할 수 없습니다. 
+- 모든 사람들이 난이도를 올바르게 계산할 수 있도록 블록 타임 스탬프가 실시간 대신 사용됩니다.
+- 이것은 물론 타임 스탬프가있는 광부가 난이도를 조작 할 수 있음을 의미하지만 노드는 실시간으로이를 확인하고 자체 내부 시계 시간을 기준으로 특정 범위를 벗어난 블록을 무시합니다.
+
+
+## transaction
+- 트랜잭션을 구현하기 위해선 이런 개념을 알아야 한다. ==> publick-key 암호화, 서명, 트랜잭션인풋과 아웃풋 등등.
+- 퍼블릭키를 암호화하기 위해선 키 한쌍이 필요하다(public key + secret key)
+- public key는 secret key로 부터 만들어진다. 
+- 메시지(?)는 private key를 이용하여 signature를 만들 수 있고, 
+- 이 signature와 public key를 가진 누구나 그 signature가 특정 private key에 의해 만들어졌다는 걸 증명할 수 있죠. 
+
+## public key 암호화
+- 퍼블릭 키 암호화를 위해 elliptic이라는 라이브러리에 포함된 다음의 두 개의 암호화 함수를 사용하
+>  1. Hash function (SHA256) for 작업 증명과 블록의 고유성 확보  
+   2. Public-key cryptography (ECDSA) for 트랜잭션
+
+## pricate , public
+- 
+
+## signature
+- 
+

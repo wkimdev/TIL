@@ -1,0 +1,12 @@
+package com.home.wkimdev.exception;
+
+public class BalanceInsufficientException extends Exception {
+	
+  // 사용자 에외 처리 
+	public BalanceInsufficientException(){};
+	
+	public BalanceInsufficientException(String message) {
+		super(message);
+	}
+	
+}

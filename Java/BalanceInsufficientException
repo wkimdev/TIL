@@ -5,8 +5,61 @@ public class BalanceInsufficientException extends Exception {
   // 사용자 에외 처리 
 	public BalanceInsufficientException(){};
 	
+	// message를 인자값으로 받아 
 	public BalanceInsufficientException(String message) {
+		// 부모 클래스의 기본 생성자로서 호출??? 
 		super(message);
 	}
 	
 }
+
+//=== account class에서 사용자 익셉션을 처리한다 
+public class Account {
+	
+	private long balance;
+	
+	public Account() {}
+	
+	public long getBalance() {
+		return balance;
+	}
+	
+	public void deposit(int money) {
+		balance += money;
+	}
+	
+	// 사용자 정의 예외 떠넘기기
+	public void withdraw(int money) throws BalanceInsufficientException {
+		
+		if(balance < money) {
+			// 사용자 정의 예외 발생 
+			throw new BalanceInsufficientException("잔고부족 : "+(money-balance)+" 모자람");
+		}
+		balance -= money;
+	}
+	
+}
+
+// account를 try-catch구문에서 실행한다. 예외 발생시, 사용자 익셉셥을 처리하여 message를 반환한다. 
+public class AccountExample {
+	
+	public static void main(String[] args) {
+		Account account = new Account();
+		
+		// 예금하기
+		account.deposit(10000);
+		System.out.println("예금액: "+account.getBalance());
+		
+		// 출금하기
+		try {
+			account.withdraw(40000);
+		} catch (BalanceInsufficientException e) {
+			// TODO: handle exception
+			String message = e.getMessage();
+			System.out.println();
+			// 예외 발생 경로를 모두 추적
+			e.printStackTrace();
+		}
+	}
+}
+

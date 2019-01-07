@@ -46,11 +46,13 @@ before destroy --> destroyed
 - 반응적으로 html 속성을 갱신하는데 사용.  
 - 동적으로 값에 따라 class를 추가하거나 뺀다. v-bind 강력함.
 - `<i class="checkBtn fas fa-check" v-bind:class="{checkBtnCompleted: todoItem.completed}" `
+- v-bind:"하위로 보낼 이벤트(props)" : "받는 이벤트"
 
 ## v-on
 - v-on 디렉티브
 - DOM '이벤트'를 수신!
 - v-on:click (@click 으로도 쓸 수 있다. )
+- v-on:"하위 컴포넌트에서 발생시킨 이벤트 이름" : "현재 컴포넌트 메서드명"  
 
 ## v-for
 - items의 리스트들을 렌더링하는 디렉티브
@@ -60,7 +62,9 @@ before destroy --> destroyed
 - `<input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">`  
 
 
-
+#### 리팩토링
+- 리팩토링 강의의 핵심은, app.vue에서 공통적인 메서드, 데이터 바인딩을 처리해주고, 그걸 컴포넌트에 분배? 하는 흐름..
+- 그림 있으면 첨부하기.
 
 
 ## reference

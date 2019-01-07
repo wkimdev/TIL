@@ -1,3 +1,9 @@
+## vue.js
+- dom에 동적으로 
+- 리액트적인
+- 컴포넌트 기반
+- 데이터 props, 데이터 바인딩.
+
 ## vue js 주요 라이프사이클
 - Vue에서, 컴포넌트는 본질적으로 미리 정의된 옵션을 가진 Vue 인스턴스
 - 모든 vue 앱은 vue함수로 새 vue 인스턴스를 만드는 것부터 시작한다.  
@@ -43,7 +49,7 @@ before destroy --> destroyed
 
 ## v-on
 - v-on 디렉티브
-- DOM 이벤트를 수신
+- DOM '이벤트'를 수신!
 - v-on:click (@click 으로도 쓸 수 있다. )
 
 ## v-for

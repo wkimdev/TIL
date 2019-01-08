@@ -1,4 +1,4 @@
-## vue.js
+## vue.js feature
 - dom에 동적으로 
 - 리액트적인
 - 컴포넌트 기반
@@ -65,6 +65,16 @@ before destroy --> destroyed
 #### 리팩토링
 - 리팩토링 강의의 핵심은, app.vue에서 공통적인 메서드, 데이터 바인딩을 처리해주고, 그걸 컴포넌트에 분배? 하는 흐름..
 - 그림 있으면 첨부하기.
+- 하위 컴포넌트들은 presentation 역할, app.vue는 공통 데이터 처리 컨테이너 역할을 한다는걸 기억하기.
+
+#### 아침 인강 정리(1/8)
+- `this.$emit('이벤트 이름', 인자1, 인자2, ....);` 
+- input에서 v-model로 이벤트를 태우고, emit 발생시킨다. 즉, 이벤트를 발생시키는 역할밖에 하지 않는다.
+- presentation 역할 (todoInput)
+- container 역할 (App.vue)
+- app.vue에서 todoItems으로 공통으로 관리가 되기 때문에 list에 잘 추가가 된다. 
+- todolist도 표현만 하도록 변경하기.
+- todolist에 있는 todoremovev애도,,, 클릭시 이벤트만 발생시키고, 삭제하는건 app.vue에서 하겠지??? -on:click=removeTodo()
 
 
 ## reference

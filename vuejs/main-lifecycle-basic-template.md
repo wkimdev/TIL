@@ -63,9 +63,9 @@ before destroy --> destroyed
 
 
 #### 리팩토링
-- 리팩토링 강의의 핵심은, app.vue에서 공통적인 메서드, 데이터 바인딩을 처리해주고, 그걸 컴포넌트에 분배? 하는 흐름..
+- 리팩토링 강의의 핵심은, app.vue에서 공통적인 메서드, 데이터 바인딩을 처리해주고, 그걸 하위 컴포넌트에 분배 하는 흐름..
 - 그림 있으면 첨부하기.
-- 하위 컴포넌트들은 presentation 역할, app.vue는 공통 데이터 처리 컨테이너 역할을 한다는걸 기억하기.
+- 하위 컴포넌트들은 presentation 역할, app.vue는 상위 컴포넌트로서 공통 데이터 처리 컨테이너 역할을 한다는걸 기억하기.
 
 #### 아침 인강 정리(1/8)
 - `this.$emit('이벤트 이름', 인자1, 인자2, ....);` 
@@ -75,6 +75,18 @@ before destroy --> destroyed
 - app.vue에서 todoItems으로 공통으로 관리가 되기 때문에 list에 잘 추가가 된다. 
 - todolist도 표현만 하도록 변경하기.
 - todolist에 있는 todoremovev애도,,, 클릭시 이벤트만 발생시키고, 삭제하는건 app.vue에서 하겠지??? -on:click=removeTodo()
+
+#### 리팩토링 정리
+- 컨테이너에서 데이터 조작이 일어난다.(APP.JS) (Container)
+- 하위 컴포넌트는 UI만(ui적으로 표현) 표현하고, DATA조작은 상위 컴포넌트로 올린다. 반응성 극대화 (Presentation 기법)
+- input, list, footer를 재사용하려면 분리해야 했다.
+- 중앙관리식 데이터 관리(vuex같은것)
+- vue.js 가 리액트보다 좀 더 장점을 갖는 부분 트랜지션 ==> 애니메이션 처리 하는 것.
+- 모달 예외처리 컴포넌트 적용.
+  
+  
+## Props
+<TodoList v-bind:내려보낼 프롭스 속성 이름="현재 위치의 컴포넌트 데이터 속성 "></TodoList>
 
 
 ## reference

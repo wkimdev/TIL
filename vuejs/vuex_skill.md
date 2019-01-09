@@ -1,12 +1,12 @@
-## Vuex ±â¼ú ¿ä¼Ò
-- state : ¿©·¯ ÄÄÆ÷³ÍÆ®¿¡ °øÀ¯µÇ´Â µ¥ÀÌÅÍ data
-- getters : ¿¬»êµÈ state °ªÀ» Á¢±ÙÇÏ´Â ¼Ó¼º computed
-- mutations : state °ªÀ» º¯°æÇÏ´Â ÀÌº¥Æ® ·ÎÁ÷/¸Ş¼­µå - method
-- actions : ºñµ¿±â Ã³¸® ·ÎÁ÷À» ¼±¾ğÇÏ´Â ¸Ş¼­µå async methods
+## Vuex ê¸°ìˆ  ìš”ì†Œ
+- state : ì—¬ëŸ¬ ì»´í¬ë„ŒíŠ¸ì— ê³µìœ ë˜ëŠ” ë°ì´í„° data
+- getters : ì—°ì‚°ëœ state ê°’ì„ ì ‘ê·¼í•˜ëŠ” ì†ì„± computed
+- mutations : state ê°’ì„ ë³€ê²½í•˜ëŠ” ì´ë²¤íŠ¸ ë¡œì§/ë©”ì„œë“œ - method
+- actions : ë¹„ë™ê¸° ì²˜ë¦¬ ë¡œì§ì„ ì„ ì–¸í•˜ëŠ” ë©”ì„œë“œ async methods
 
 
-# state ¶õ?
-- ¿©·¯ ÄÄÆ÷³ÍÆ®°£¿¡ °øÀ¯ÇÒ µ¥ÀÌÅÍ - »óÅÂ
+# state ë€?
+- ì—¬ëŸ¬ ì»´í¬ë„ŒíŠ¸ê°„ì— ê³µìœ í•  ë°ì´í„° - ìƒíƒœ
 
 ```
 //vue
@@ -27,8 +27,8 @@ state: {
 
 ```
 
-# getters ¶õ?
-- state °ªÀ» Á¢±ÙÇÏ´Â ¼Ó¼ºÀÌÀÚ computed() Ã³·³ ¹Ì¸® ¿¬»êµÈ °ªÀ» Á¢±ÙÇÏ´Â ¼Ó¼º
+# getters ë€?
+- state ê°’ì„ ì ‘ê·¼í•˜ëŠ” ì†ì„±ì´ì computed() ì²˜ëŸ¼ ë¯¸ë¦¬ ì—°ì‚°ëœ ê°’ì„ ì ‘ê·¼í•˜ëŠ” ì†ì„±
 ```
 // store.js
 state: {
@@ -48,10 +48,10 @@ getters: {
 
 ```
 
-## mutations¶õ?
-- stateÀÇ °ªÀ» º¯°æÇÒ ¼ö ÀÖ´Â À¯ÀÏÇÑ ¹æ¹ıÀÌÀÚ ¸Ş¼­µå
-- ¹ÂÅ×ÀÌ¼ÇÀº commit() À¸·Î µ¿ÀÛ½ÃÅ²´Ù.
-- ¹ÂÅ×ÀÌ¼ÇÀ¸·Î stateÁ¶ÀÛ °¡´É.
+## mutationsë€?
+- stateì˜ ê°’ì„ ë³€ê²½í•  ìˆ˜ ìˆëŠ” ìœ ì¼í•œ ë°©ë²•ì´ì ë©”ì„œë“œ
+- ë®¤í…Œì´ì…˜ì€ commit() ìœ¼ë¡œ ë™ì‘ì‹œí‚¨ë‹¤.
+- ë®¤í…Œì´ì…˜ìœ¼ë¡œ stateì¡°ì‘ ê°€ëŠ¥.
 
 ```
 //store.js
@@ -68,11 +68,11 @@ mutations: {
 
 //App.vue
 this.$store.commit('printNumbers');
-this.$store.commit('sumNumbers', 20); //sumnumber¶ó´Â ¹ÂÅ×ÀÌ¼Ç È£Ãâ //30
+this.$store.commit('sumNumbers', 20); //sumnumberë¼ëŠ” ë®¤í…Œì´ì…˜ í˜¸ì¶œ //30
 ```
 
-## mutationsÀÇ commit() Çü½Ä
-- state¸¦ º¯°æÇÏ±â À§ÇÑ mutations¸¦ µ¿ÀÛ½ÃÅ³¶§ ÀÎÀÚ(payload)¸¦ Àü´ŞÇÒ ¼ö ÀÖÀ½
+## mutationsì˜ commit() í˜•ì‹
+- stateë¥¼ ë³€ê²½í•˜ê¸° ìœ„í•œ mutationsë¥¼ ë™ì‘ì‹œí‚¬ë•Œ ***ì¸ì(payload)*** ë¥¼ ì „ë‹¬í•  ìˆ˜ ìˆìŒ
 
 ```
 //store.js

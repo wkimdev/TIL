@@ -1,44 +1,73 @@
-## Vuex - »óÅÂ °ü¸® ¶óÀÌºê·¯¸®
-## º¹ÀâÇÑ ¾îÇÃ¸®ÄÉÀÌ¼ÇÀÇ ÄÄÆ÷³ÍÆ®µéÀ» È¿À²ÀûÀ¸·Î °ü¸®ÇÏ´Â Vuex
-- vuex ¶óÀÌºê·¯¸®ÀÇ µîÀå ¹è°æÀÎ flux ÆÐÅÏ
-- vuex ¶óÀÌºê·¯¸®ÀÇ ÁÖ¿ä ¼Ó¼ºÀÎ **state, getters, mutations, actions** ÇÐ½À
-- vuex¸¦ ´õ ½±°Ô ÄÚµùÇÒ ¼ö ÀÖ´Â ¹æ¹ýÀÎ helper ±â´É
-- vuex·Î ÇÁ·ÎÁ§Æ® ±¸Á¶È­ ¹× ¸ðµâ ±¸Á¶È­ ¹æ¹ý.
-
+## Vuex - ìƒíƒœ ê´€ë¦¬ ë¼ì´ë¸ŒëŸ¬ë¦¬
+## ë³µìž¡í•œ ì–´í”Œë¦¬ì¼€ì´ì…˜ì˜ ì»´í¬ë„ŒíŠ¸ë“¤ì„ íš¨ìœ¨ì ìœ¼ë¡œ ê´€ë¦¬í•˜ëŠ” Vuex
+- vuex ë¼ì´ë¸ŒëŸ¬ë¦¬ì˜ ë“±ìž¥ ë°°ê²½ì¸ flux íŒ¨í„´
+- vuex ë¼ì´ë¸ŒëŸ¬ë¦¬ì˜ ì£¼ìš” ì†ì„±ì¸ **state, getters, mutations, actions** í•™ìŠµ
+(ì‰½ê²Œ, ì—¬íƒœê¹Œì§€ ë°°ìš´ê±¸ë¡œ ë³¸ë‹¤ë©´ state=data property, getters=computed, mutations= methods, actions = ë¹„ë™ê¸° methods)
+- vuexë¥¼ ë” ì‰½ê²Œ ì½”ë”©í•  ìˆ˜ ìžˆëŠ” ë°©ë²•ì¸ helper ê¸°ëŠ¥.
+- vuexë¡œ í”„ë¡œì íŠ¸ êµ¬ì¡°í™” ë° ëª¨ë“ˆ êµ¬ì¡°í™” ë°©ë²•.
+- fluxíŒ¨í„´ê³¼ ë¹„ìŠ·...
 
 ## vuex?
-- ¹«¼öÈ÷ ¸¹Àº ÄÄÆ÷³ÍÆ®ÀÇ µ¥ÀÌÅÍ¸¦ °ü¸®ÇÏ±â À§ÇÑ »óÅÂ °ü¸® ÆÐÅÏÀÌÁö ¶óÀÌºê·¯¸®.
-- reactÀÇ flux ÆÐÅÏ¿¡¼­ ±âÀÎÇÔ.
-- vue.js Áß°í±Þ °³¹ßÀÚ·Î ¼ºÀåÇÏ±â À§ÇÑ ÇÊ¼ö °ü¹®.
+- **ë¬´ìˆ˜ížˆ ë§Žì€ ì»´í¬ë„ŒíŠ¸ì˜ ë°ì´í„°ë¥¼ ê´€ë¦¬í•˜ê¸° ìœ„í•œ ìƒíƒœ ê´€ë¦¬ íŒ¨í„´ì´ì§€ ë¼ì´ë¸ŒëŸ¬ë¦¬.**
+- reactì˜ flux íŒ¨í„´ì—ì„œ ê¸°ì¸í•¨.
+- vue.js ì¤‘ê³ ê¸‰ ê°œë°œìžë¡œ ì„±ìž¥í•˜ê¸° ìœ„í•œ í•„ìˆ˜ ê´€ë¬¸.
 
 
-## Flux¶õ?
-- MVC ÆÐÅÏÀÇ º¹ÀâÇÑ µ¥ÀÌÅÍ Èå¸§ ¹®Á¦¸¦ ÇØ°áÇÏ´Â °³¹ß ÆÐÅÏ (´Ü¹æÇâ - ÀÌ¹ÌÁö!)
-- 1. action : È­¸é¿¡¼­ ¹ß»ýÇÏ´Â ÀÌº¥Æ® ¶Ç´Â »ç¿ëÀÚÀÇ ÀÔ·Â
-- 2. dispatcher : µ¥ÀÌÅÍ¸¦ º¯°æÇÏ´Â ¹æ¹ý, ¸Þ¼­µå (dispatcher --> store --> view )
-- 3. model : È­¸é¿¡ Ç¥½ÃÇÒ µ¥ÀÌÅÍ
-- 4. view : »ç¿ëÀÚ¿¡°Ô ºñÃçÁö´Â È­¸é
+## Fluxëž€?
+- MVC íŒ¨í„´ì˜ ë³µìž¡í•œ ë°ì´í„° íë¦„ ë¬¸ì œë¥¼ í•´ê²°í•˜ëŠ” ê°œë°œ íŒ¨í„´ (ë‹¨ë°©í–¥ - ì´ë¯¸ì§€!) - unidirectional data flow
+- ex) ë·°ì—ì„  ë¶€ëª¨ -> ìžì‹ (propsë¡œ ë°ì´í„° ë³´ëƒ„)// ìžì‹ --> ë¶€ëª¨ (ìžì‹ì—ì„œ ë¶€ëª¨ì—ê²Œ ë°ì´í„°ë¥¼ ë³´ë‚¼ë• eventë°œìƒí•´ì„œ ë³´ëƒ„) //ì œí•œí•¨-íë¦„ ì œì–´
+  
+***  
+  
+- 1. action : í™”ë©´ì—ì„œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸ ë˜ëŠ” ì‚¬ìš©ìžì˜ ìž…ë ¥
+- 2. dispatcher : ë°ì´í„°ë¥¼ ë³€ê²½í•˜ëŠ” ë°©ë²•, ë©”ì„œë“œ (dispatcher --> store --> view )
+- 3. model : í™”ë©´ì— í‘œì‹œí•  ë°ì´í„°
+- 4. view : ì‚¬ìš©ìžì—ê²Œ ë¹„ì¶°ì§€ëŠ” í™”ë©´
 
-## flux ÆÐÅÏÀÇ ´Ü¹æÇâ µ¥ÀÌÅÍ Èå¸§
-- µ¥ÀÌÅÍÀÇ Èå¸§ÀÌ ¿©·¯ °¥·¡·Î ³ª´µÁö ¾Ê°í ´Ü¹æÇâÀ¸·Î¸¸ Ã³¸®µÈ´Ù.
+## mvc íŒ¨í„´ê³¼ fluxíŒ¨í„´ ë¹„êµ  
+   
+```
+- mvn : controller(modelê³¼ viewë¥¼ ì œì–´) --> model <===> view  (ì–‘ë°©í–¥)
+- flux : actions ---> dispatcher ---> model ---> view (ë‹¨ë°©í–¥)  
+```
+  
+  
+#### mvcíŒ¨í„´ì˜ ë¬¸ì œì 
+- ê¸°ëŠ¥ ì¶”ê°€ ë° ë³€ê²½ì— ë”°ë¼ ìƒê¸°ëŠ” ë¬¸ì œì ì„ ì˜ˆì¸¡í•  ìˆ˜ ì—†ìŒ.
+- ì•±ì´ ë³µìž¡í•´ì§€ë©´ì„œ ìƒê¸°ëŠ” ì—…ë°ì´íŠ¸ ë£¨í”„  
 
-## vuex°¡ ÇÊ¿äÇÑ ÀÌÀ¯?
-- º¹ÀâÇÑ ¾îÇÃ¸®ÄÉÀÌ¼Ç¿¡¼­ ÄÄÆ÷³ÍÆ® °¹¼ö°¡ ¸¹¾ÆÁö¸é ÄÄÆ÷³ÍÆ®°£ÀÇ µ¥ÀÌÅÍ Àü´ÞÀÌ ¾î·Á¿öÁø´Ù.
-- ÀÌº¥Æ® ¹ö½º·Î ÇØ°á? --> ¾îµð¼­ ÀÌº¥Æ®¸¦ º¸³Â´ÂÁö È¤Àº ¾îµð¼­ ÀÌº¥Æ®¸¦ ¹Þ¾Ò´ÂÁö ¾Ë±â ¾î·Á¿ò.
-- ÄÄÆ÷³ÍÆ®°£ µ¥ÀÌÅÍ Àü´ÞÀÌ ¸í½ÃÀûÀÌÁö ¾ÊÀ½.
+## flux íŒ¨í„´ì˜ ë‹¨ë°©í–¥ ë°ì´í„° íë¦„
+- ë°ì´í„°ì˜ íë¦„ì´ ì—¬ëŸ¬ ê°ˆëž˜ë¡œ ë‚˜ë‰˜ì§€ ì•Šê³  ë‹¨ë°©í–¥ìœ¼ë¡œë§Œ ì²˜ë¦¬ëœë‹¤.
+- ì´ë¯¸ì§€!
 
-# VUEX·Î ÇØ°áÇÒ ¼ö ÀÖ´Â ¹®Á¦
-- 1. MVC ÆÐÅÏ¿¡¼­ ¹ß»ýÇÏ´Â ±¸Á¶Àû ¿À·ù
-- 2. ÄÄÆ÷³ÍÆ®°£ µ¥ÀÌÅÍ Àü´Þ ¸í½Ã
-- 3. ¿©·¯ °³ÀÇ ÄÄÆ÷³ÍÆ®¿¡¼­ °°Àº µ¥ÀÌÅÍ¸¦ ¾÷µ¥ÀÌÆ® ÇÒ ¶§ µ¿±âÈ­ ¹®Á¦
 
-# vuex ÄÁ¼Á
-- state : ÄÄÆ÷³ÍÆ® °£¿¡ °øÀ¯ÇÏ´Â µ¥ÀÌÅÍ data()
-- view : µ¥ÀÌÅÍ¸¦ Ç¥½ÃÇÏ´Â È­¸é template
-- action : »ç¿ëÀÚÀÇ ÀÔ·Â¿¡ µû¶ó µ¥ÀÌÅÍ¸¦ º¯°æÇÏ´Â methods
+## vuexê°€ í•„ìš”í•œ ì´ìœ ?
+- ë³µìž¡í•œ ì–´í”Œë¦¬ì¼€ì´ì…˜ì—ì„œ ì»´í¬ë„ŒíŠ¸ ê°¯ìˆ˜ê°€ ë§Žì•„ì§€ë©´ ì»´í¬ë„ŒíŠ¸ê°„ì˜ ë°ì´í„° ì „ë‹¬ì´ ì–´ë ¤ì›Œì§„ë‹¤.
+- ì´ë²¤íŠ¸ ë²„ìŠ¤ë¡œ í•´ê²°? --> ì–´ë””ì„œ ì´ë²¤íŠ¸ë¥¼ ë³´ëƒˆëŠ”ì§€ í˜¹ì€ ì–´ë””ì„œ ì´ë²¤íŠ¸ë¥¼ ë°›ì•˜ëŠ”ì§€ ì•Œê¸° ì–´ë ¤ì›€.    
 
-## vuex ±¸Á¶
-- ÄÄÆ÷³ÍÆ® -> ºñµ¿±â ·ÎÁ÷ -> µ¿±â ·ÎÁ÷ -> »óÅÂ(ÀÌ¹ÌÁö!)
+```
+// login.vue
+eventBus.$emit('fetch', loginInfo);
+
+// Lis.vue
+eventBus.$emit('refresh', refresAction);
+```
+  
+- ì»´í¬ë„ŒíŠ¸ê°„ ë°ì´í„° ì „ë‹¬ì´ ëª…ì‹œì ì´ì§€ ì•ŠìŒ.
+
+# VUEXë¡œ í•´ê²°í•  ìˆ˜ ìžˆëŠ” ë¬¸ì œ
+- 1. MVC íŒ¨í„´ì—ì„œ ë°œìƒí•˜ëŠ” êµ¬ì¡°ì  ì˜¤ë¥˜
+- 2. ì»´í¬ë„ŒíŠ¸ê°„ ë°ì´í„° ì „ë‹¬ ëª…ì‹œ
+- 3. ì—¬ëŸ¬ ê°œì˜ ì»´í¬ë„ŒíŠ¸ì—ì„œ ê°™ì€ ë°ì´í„°ë¥¼ ì—…ë°ì´íŠ¸ í•  ë•Œ ë™ê¸°í™” ë¬¸ì œ
+
+# vuex ì»¨ì…‰
+- state : ì»´í¬ë„ŒíŠ¸ ê°„ì— ê³µìœ í•˜ëŠ” ë°ì´í„° data()
+- view : ë°ì´í„°ë¥¼ í‘œì‹œí•˜ëŠ” í™”ë©´ template
+- action : ì‚¬ìš©ìžì˜ ìž…ë ¥ì— ë”°ë¼ ë°ì´í„°ë¥¼ ë³€ê²½í•˜ëŠ” methods  
+- ***ë‹¨ë°©í–¥!!! ì´ë¼ëŠ”ê±¸ ê¸°ì–µí•˜ê¸°!!!!***
+
+## vuex êµ¬ì¡°
+- ì»´í¬ë„ŒíŠ¸ -> ë¹„ë™ê¸° ë¡œì§ -> ë™ê¸° ë¡œì§ -> ìƒíƒœ(ì´ë¯¸ì§€!)
 
 
 --

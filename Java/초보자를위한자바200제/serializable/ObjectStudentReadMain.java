@@ -8,7 +8,7 @@ public class ObjectStudentReadMain {
 	public static void main(String[] args) {
 		
 		ObjectStudentRWG<Student> osw = new ObjectStudentRWG<Student>();
-		
+		 
 		try {
 			osw.read("testFolder\\student.obj");
 		} catch (IOException e) {

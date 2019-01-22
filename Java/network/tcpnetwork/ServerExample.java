@@ -83,18 +83,24 @@ public class ServerExample extends Application {
 		void stopServer() {
 			// 서버 종료 코드 
 			try {
-				Iterator<Client> iterator = connections.iterator();
+				// 모든 socket을 닫는 코드 
+				Iterator<Client> iterator = connections.iterator(); //?
 				while(iterator.hasNext()) {
 					Client client = iterator.next();
 					client.socket.close();
 					iterator.remove();
 				}
+				
+				// serversocket을 닫는 코드 
 				if(serverSocket!=null && !serverSocket.isClosed()) {
 					serverSocket.close(); // 소켓 서버 종료 
 				}
+				
+				// executorService 종료 코드 
 				if(serverSocket!=null && !excutorService.isShutdown()) {
 					excutorService.shutdown();	// 스레드 종료 
 				}
+				// UI 처리 
 				Platform.runLater(()->{
 					displayText("[서버 멈춤]");
 					btnStartStop.setText("start");

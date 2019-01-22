@@ -50,7 +50,7 @@ public class ClientExample extends Application {
 	void stopClient() {
 		try {
 			Platform.runLater(()->{
-				displayText("[���� ����]");
+				displayText("[연결 종료]");
 				btnConn.setText("start");
 				btnSend.setDisable(true);
 			});

@@ -24,6 +24,10 @@ mutations: {
 }
 
 ```
+
+```
+<button @click="clickBtn"> popup message </button>
+```
   
   
 ## mapActions
@@ -45,7 +49,12 @@ actions: {
   }
 }
 
-```  
+```
+
+```
+<button @click="delayClickBtn"> delay popup message </button>
+```
+
 
 ## 헬퍼의 유연한 문법
 - vuex에 선언한 속성을 그대로 컴포넌트에 연결하는 문법  
@@ -53,7 +62,7 @@ actions: {
 ```
 // 배열 리터럴
 ...mapMutations([
-  'clickBtn', // 'clickBtn' : clickBtn
+  'clickBtn', // 'clickBtn' : clickBtn (키값 : 밸류값 => 서로 이름이 같이 때문에 축약 가능)
   'addNumber' //  addNumber(인자)
 ])
 ```
@@ -72,8 +81,13 @@ actions: {
 ## 써보면서 느낀점
 - mutations으로 메서드를 넘길때, 인자값을 주지 않아 엄청 편해진다.~~~!!
 - 단, 전달되는 argument가 여러개일 경우, object로 묶어야 됨을 주의하자.
-- 저녁에 집에서 과제수행하기.
-
+- 저녁에 집에서 과제수행하기.  
+  
+```
+...mapMutations({
+      removeOne: 'removeOneContext' // 템플릿에서 호출부분: store에서 호출 부분 , 인자값을 넘기지 않아도 암묵적으로 넘긴다!!!!
+})
+```
 
 
 

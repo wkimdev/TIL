@@ -1,5 +1,5 @@
 ## mapState
-- Vuex에 선언한 state속성을 뷰 컴포넌트에 더 쉽게 연결해주는 헬퍼  
+- Vuex에 선언한 state속성을 뷰 컴포넌트에 **더 쉽게** 연결해주는 헬퍼  
 - spread operator : 기존에 존재하는 computed속성과 mapgetter를 함께 쓰기 위함으로 보자  
    
 ```
@@ -15,6 +15,11 @@ computed() {
 state: {
   num: 10
 }
+```
+
+```
+<!-- <p>{{ this.$store.state.num }}</p> -->
+<p>{{ this.num }}</p>
 ```
 
 ## mapGetters

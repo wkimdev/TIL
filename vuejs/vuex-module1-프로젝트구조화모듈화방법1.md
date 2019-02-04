@@ -1,3 +1,24 @@
+## 프로젝트 구조화와 모듈화 방법1
+- 아래와 같은 store구조를 모듈화 하는 방법?
+- 힌트! Vuex.Store({ })의 속성을 모듈로 연결 
+
+```
+// store.js
+import Vue from 'vue'
+import Vue from 'vue'
+
+export const store = new Vuex.Store({
+ state: {},
+ getters: {},
+ mutations: {},
+ actions: {}
+})
+
+```
+
+- 1. 파일로 분리해서 모듈화 
+
+
 ## Modules - 자바스크립트 모듈화 방법
 - 모듈, 덩어리
 - 재사용성이 뛰어난 녀석들을 묶어서 사용

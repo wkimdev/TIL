@@ -18,6 +18,30 @@ export const store = new Vuex.Store({
 
 - 1. 파일로 분리해서 모듈화 
 
+## 프로젝트 구조화와 모듈화 방법2
+- 앱이 비대해져서 1개의 store로는 관리가 힘들때 modules 속성 사용
+
+```
+//store.js
+import Vue from 'vue'
+import Vuex from 'vuex'
+import todo from 'modules/todo.js'
+
+export const store = new Vuex.Store({
+ modules: {
+   moduleA: todo, // 모듈 명칭 : 모듈 파일명
+   todo // todo: todo
+ }
+})
+
+// todo.js
+const state = {}
+const getters = {}
+const mutations = {}
+const actions = {} 
+```
+  
+  
 
 ## Modules - 자바스크립트 모듈화 방법
 - 모듈, 덩어리

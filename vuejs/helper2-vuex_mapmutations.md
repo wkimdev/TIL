@@ -49,7 +49,12 @@ actions: {
   }
 }
 
-```  
+```
+
+```
+<button @click="delayClickBtn"> delay popup message </button>
+```
+
 
 ## 헬퍼의 유연한 문법
 - vuex에 선언한 속성을 그대로 컴포넌트에 연결하는 문법  
@@ -57,7 +62,7 @@ actions: {
 ```
 // 배열 리터럴
 ...mapMutations([
-  'clickBtn', // 'clickBtn' : clickBtn
+  'clickBtn', // 'clickBtn' : clickBtn (키값 : 밸류값 => 서로 이름이 같이 때문에 축약 가능)
   'addNumber' //  addNumber(인자)
 ])
 ```

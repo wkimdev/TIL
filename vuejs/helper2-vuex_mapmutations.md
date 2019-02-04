@@ -24,6 +24,10 @@ mutations: {
 }
 
 ```
+
+```
+<button @click="clickBtn"> popup message </button>
+```
   
   
 ## mapActions

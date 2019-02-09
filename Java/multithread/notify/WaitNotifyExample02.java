@@ -7,8 +7,12 @@ public class WaitNotifyExample02 {
 		DataBox dataBox = new DataBox();
 		
 		// 스레드 생성
+		ProducerThread pt = new ProducerThread(dataBox);
+		ConsumerThread ct = new ConsumerThread(dataBox);
 		
 		// 스레드 시작 
+		pt.start();
+		ct.start();
 		
 	}
 }

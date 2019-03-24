@@ -5,7 +5,7 @@ import com.home.test.thread.MyRuns;
 import com.home.test.thread.MyThread;
 
 // 멀티 쓰레드 프로그램
-public class MainClass {
+public class MainClass {   
 	
 	public static void main(String[] args) {
 		

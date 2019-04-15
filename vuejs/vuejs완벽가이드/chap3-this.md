@@ -1,5 +1,5 @@
 # this
-- javascript 는 기본적으로 전역으로 this를 사용...
+- javascript 는 기본적으로 **전역**으로 this를 사용...
 - 브라우저, 윈도우 객체 10 
 
 

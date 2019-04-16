@@ -15,5 +15,5 @@
 - 
 
 ### axios
-- axios는 promise기반으로 객체반환을 해준다. 
+- axios는 promise기반으로 객체반환, api 제공을 해준다. 
 

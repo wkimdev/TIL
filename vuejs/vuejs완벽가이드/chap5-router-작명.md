@@ -1,6 +1,11 @@
 ## router폴더는 routes로
 - main.js에서 routes의 index.js를 가져오는 걸로 설정하기. 
 
+## vue-rouete
+- 네비게이션을 위해 `router-link` 컴포넌트에 사용한다. 
+- 기본적으로 `<router-link>`는 `<a>`태그로 렌더링 된다. 
+- **`<router-view>는 현재 라우트에 맞는 컴포넌트가 렌더링 되도록 해준다.`**
+
 #### 작업할때
 - 1. api --> 2. store
 

@@ -177,7 +177,7 @@ if('' || null || undefined || 0 || NaN){
 ```
 //[], {}도 빈값으로 처리한다. 
 
-var isEmpty = function(value){
+function isEmpty(value){
   if( value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length )){
     return true, 
   } else {
@@ -188,27 +188,37 @@ var isEmpty = function(value){
     
     
 ## typeof, instance of 
+- typeof와 거의 동일하지만 primitive에서 작동하지 않는다.(string, boolean, number)
+- console.log(typeof(undefined)); // works
 
-typeof는 primitive에서 다 작동
+#### typeof 는 버그가 좀 있다!
+- `typeof null ==> object ( 고치지 않았지만 버그가 있따. )`
+- typeof {}  
+    
+```
+console.log(typeof []); // object
+console.log(typeof {}); // object
+console.log(typeof null); // object
+  
+```
+  
 
-typeof 는 버그가 좀 있다. 
+#### instance of 
+```
+console.log([] instanceof Array); // true
+console.log({} instanceof Object); // true
 
-typeof null ==> object ( 고치지 않았지만 버그가 있따. )
-typeof {}
-
-instance of를 사용한다. (하지만 primitive에서 작동하지 않는다. )
-
-
-
-## 아래부분은 이어서 들어야 겠다. 
-console.log(he instanceof array);
-
-const he = [];
-
+// primitive type.. 
 // "1"
 // true
 // undefined
- https://www.youtube.com/watch?v=4UZ9yNitwiw&t=34s
+console.log("" instanceof String) // false
+console.log(true instanceof Boolean) // false
+
+```
+ 
+
+
 
 ## test util  
 - https://repl.it/repls/HilariousClosedDictionary  

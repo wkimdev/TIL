@@ -59,6 +59,7 @@ console.log(inner()); // 이미 outer는 끝났지만 아직 실행 가능하다
 - 내부함수를 가지고 있는 외부함수 지역변수에 접근 할 수 있따. 
 - 오.. 어렵다.. 고민 안해본건데 ㅜㅜ 내일은 아래것부터 이어서 듣기.. 
 - https://www.youtube.com/watch?v=9A0pMrS6Bh0
+- https://opentutorials.org/module/532/6544
 
 ```
 function movie(title){

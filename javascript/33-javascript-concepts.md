@@ -116,7 +116,34 @@ console.log(parseInt("true")) // NaN
 ```  
   
 - 그래서 NaN ==1 을 하려고 해서 이상한 것이다. 
-- 그렇기 때문에 === 를 쓴다. type corercion을 피해갈 수 있다. 
+- 그렇기 때문에 === 를 쓴다. type corercion을 피해갈 수 있다.  **생각해볼 점
+
+## double equal은 몇 가지 복잡한 문제를 해결할 수 있는 사례. 
+- 무조건 트리플 equal가 능사는 아닐 수 도 있다. 상황에 따라 전략적으로 사용해야 함... 
+http://adripofjavascript.com/blog/drips/equals-equals-null-in-javascript.html
+  
+```
+var ethos = {
+    achilles: "glory",
+    aeneas: "duty",
+    hades: null // Beyond human understanding
+};
+
+function printEthos (name) {
+    if (ethos[name] != null) {
+        console.log(ethos[name]);
+    } else {
+        console.log(name + " has no recorded ethos.");
+    }
+}
+
+ethos.pythagoras = 0;
+
+printEthos("pythagoras"); // 0 
+```
+  
+
+
 
 #### 내가 자주 헤깔리는 부분  
 ```

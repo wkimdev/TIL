@@ -57,7 +57,8 @@ console.log(inner()); // 이미 outer는 끝났지만 아직 실행 가능하다
 - 객체안에 함수가 선언되어 있는 모양
 - 메서드들은 내부 함수이고, 객체안에 선언되어 있다. 
 - 내부함수를 가지고 있는 외부함수 지역변수에 접근 할 수 있따. 
-
+- 오.. 어렵다.. 고민 안해본건데 ㅜㅜ 내일은 아래것부터 이어서 듣기.. 
+- https://www.youtube.com/watch?v=9A0pMrS6Bh0
 
 ```
 function movie(title){

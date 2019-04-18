@@ -33,7 +33,8 @@
 - javascript에서 객체는, 속성(properties)를 담고있는 가방(collection)으로 볼 수 있다. 
 - 속성값은 객체를 포함해 어떠한 자료형도 될 수 있고, 그 덕분에 복잡한 데이터 구조를 형성하는게 가능해 진다. 
 - 속성은 key 값으로 식별된다. 
-- **키값은 string 이거나 symbol값이다. **
+- **키값은 string 이거나 symbol값이다.**  
+
 
 #### Dates
 #### Arrays
@@ -133,27 +134,6 @@ if(hello){
 // }
 // 결과 apple
 ```
-
-```
-const value2 = '';
-
-// 1. 
-if(!value2){
-  console.log('no~~~');
-}
-
-// 2. 
-// if(value2 !== undefined){
-//   console.log('비어 있음~~~');
-// } 
-else {
-  console.log('값이 있음~~~');
-}
-
-// 1과 2의 차이가 무엇인가. 
-// ''과 undefined의 차이 
-```
-  
 ## undefined 
 - undefined는 값이 할당되지 않은 javascript primitive type이다.
   
@@ -177,6 +157,33 @@ if(typeof y === string){
   console.log('test2~'); // ReferenceError: string is not defined./.. 이런 에러가 왜 나지..... 
 }
 
+```
+
+#### 그래서 빈값 체크는 어떻게 하지?
+- 자바스크립트에서 false로 반환되는 값은
+- `"", null, undefined, 0, NaN`, 나머지는 모두 true이다. 
+  
+```
+if('' || null || undefined || 0 || NaN){
+  // ...
+}else{
+  console.log("여기가 실행");
+}
+
+```
+
+- 위의 경우 이외에도, 빈 배열 ([]), 빈 객체({})가 있을 수도 있다. 그럴 경우 아래처럼 처리한다. 
+  
+```
+//[], {}도 빈값으로 처리한다. 
+
+var isEmpty = function(value){
+  if( value == "" || value == null || value == undefined || (value != null && typeof value == "object" && !Object.keys(value).length )){
+    return true, 
+  } else {
+    return false;
+  }
+}
 ```
     
     
@@ -206,3 +213,4 @@ const he = [];
 ## test util  
 - https://repl.it/repls/HilariousClosedDictionary  
 - https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures    
+- 출처: https://sanghaklee.tistory.com/3 [이상학의 개발블로그]

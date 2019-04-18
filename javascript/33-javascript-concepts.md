@@ -1,3 +1,47 @@
+# javascript type
+- javascript은 primitive type, obejct type으로 나뉜다. 
+
+## primitive values
+- 오브젝트를 제외한 모든 값은 **변경 불가능한 값(immutable value)이다.**  
+- 특히 c언어와는 다르게도, **문자열은 불변값(immutable)이다.**  
+
+## 1. 상수
+- 아래 세가지 타입은 상수이므로, 이것들로 다른 오브젝트를 표현할 수 없다. 
+  
+#### boolean  
+- true, false   
+  
+#### Null 
+- null type은 딱 한가지 값인 null을 가질 수 있다.   
+  
+#### Undefined
+- 값을 할당하지 않는 변수는 `undefined`값을 가진다.  
+
+## 2. Number
+## 3. String
+- C 같은 언어와는 다르게, 자바스크립트의 문자열은 변경 불가능 (immutable) 하다. 
+- 이것은 한 번 문자열이 생성되면, 그 문자열을 수정할 수 없다는걸 의미한다. 
+- 그러나 원래 문자열에서 일부가 수정된 다른 문자열을 만드는건 가능  
+
+## 4. symbol
+- es6에서 추가됨. 
+- 유일하고 변경 불가능한 (immutable) 기본값(primitive value) 이다. 
+
+  
+## object type
+- 객체는 식별자(identifier)로 참조할 수 있는, 메모리에 있는 값이다. 
+- javascript에서 객체는, 속성(properties)를 담고있는 가방(collection)으로 볼 수 있다. 
+- 속성값은 객체를 포함해 어떠한 자료형도 될 수 있고, 그 덕분에 복잡한 데이터 구조를 형성하는게 가능해 진다. 
+- 속성은 key 값으로 식별된다. 
+- **키값은 string 이거나 symbol값이다. **
+
+#### Dates
+#### Arrays
+#### WeekMaps, Maps, Sets
+#### TypedArrays
+  
+
+
 ## Value Types and reference  
 
 ```
@@ -161,4 +205,4 @@ const he = [];
 
 ## test util  
 - https://repl.it/repls/HilariousClosedDictionary  
-  
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures    

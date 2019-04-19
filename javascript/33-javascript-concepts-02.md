@@ -36,6 +36,10 @@ console.log(someFunc);
 - 내부 함수에서 외부함수의 지역변수에 접근할 수 있다.  --> 이게 클로저?  
   
 ## 클로저( Closure ) 
+- 내부함수가 외부함수의 맥락(context)에 접근할 수 있는 것을 가리킨다. 
+- 왜, 언제쓰는지??, private value지정으로 뭘 할 수 있는걸까... 
+
+
 #### case 02  
 ```
 function outter(){
@@ -86,8 +90,40 @@ console.log(m.get_title());
 
 ```
 
+```
+// 5번 출력이 겹친다. 
+var arr = [];
+// i의 값은 외부변수 값이 아니다...  
+for(var i = 0; i < 5 ; i++){
+  arr[i] = function(){
+    return i;
+  }
+}
+
+for(var index in arr){
+  console.log(arr[index]());
+}
+```
+
+- 외부함수의 지역변수가, 내부함수의 지역변수에 접근할 수 있는 경우.  
+```
+var arr = [];
+for(var i = 0; i < 5 ; i++){
+  arr[i] = function(id){
+    return function(){
+      return id;
+    }
+  }(i);
+  
+}
+
+for(var index in arr){
+  console.log(arr[index]());
+}
 
 
+```
+  
   
 ## Expression vs Statement
   

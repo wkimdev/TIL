@@ -1,16 +1,46 @@
 ## Annotation
 
 #### event
-- application event´Â ´À½¼ÇÏ°Ô °áÇÕµÈ ±¸¼º ¿ä¼Ò »çÀÌÀÇ Á¤º¸¸¦ ±³È¯ÇÏ´Â ¼ö´Ü.
+- application eventëŠ” ëŠìŠ¨í•˜ê²Œ ê²°í•©ëœ êµ¬ì„± ìš”ì†Œ ì‚¬ì´ì˜ ì •ë³´ë¥¼ êµí™˜í•˜ëŠ” ìˆ˜ë‹¨.
 
-#### annotation ±â¹İ ÀÌº¥Æ® Listener
-- annotation ±â¹İ ÀÌº¥Æ® Listener¸¦ Áö¿øÇÑ´Ù.
-- ¸Ş¼ÒµåÀÇ Signature¿Í ÀÏÄ¡ÇÏ´Â ApplicationListener¸¦ ÀÚµ¿À¸·Î µî·ÏÇÏ±â À§ÇØ °ü¸® BeanÀÇ ¸Ş¼Òµå¿¡ @EventListener¸¦ »ç¿ëÇÏ¿© AnnotationÀ» ºÙÀÏ ¼ö ÀÖ´Ù.
-
-
-#### DTO¿Í DAO
-- DTO(Data Transfer Object) : VO(Value Object)¶ó°íµµ ÇÔ. °èÃş°£ µ¥ÀÌÅÍ¸¦ ±³È¯ÇÏ±â À§ÇÑ ÀÚ¹ÙºóÁî.
-- DAO(Data Access Object) : db¸¦ »ç¿ëÇØ µ¥ÀÌÅÍ¸¦ CRUD ÇÏ´Â ±â´ÉÀ» Àü´ãÇÏµµ·Ï ÇÏ´Â ¿ÀºêÁ§Æ®. 
+#### annotation ê¸°ë°˜ ì´ë²¤íŠ¸ Listener
+- annotation ê¸°ë°˜ ì´ë²¤íŠ¸ Listenerë¥¼ ì§€ì›í•œë‹¤.
+- ë©”ì†Œë“œì˜ Signatureì™€ ì¼ì¹˜í•˜ëŠ” ApplicationListenerë¥¼ ìë™ìœ¼ë¡œ ë“±ë¡í•˜ê¸° ìœ„í•´ ê´€ë¦¬ Beanì˜ ë©”ì†Œë“œì— @EventListenerë¥¼ ì‚¬ìš©í•˜ì—¬ Annotationì„ ë¶™ì¼ ìˆ˜ ìˆë‹¤.
 
 
+#### DTOì™€ DAO
+- DTO(Data Transfer Object) : VO(Value Object)ë¼ê³ ë„ í•¨. ê³„ì¸µê°„ ë°ì´í„°ë¥¼ êµí™˜í•˜ê¸° ìœ„í•œ ìë°”ë¹ˆì¦ˆ.
+- DAO(Data Access Object) : dbë¥¼ ì‚¬ìš©í•´ ë°ì´í„°ë¥¼ CRUD í•˜ëŠ” ê¸°ëŠ¥ì„ ì „ë‹´í•˜ë„ë¡ í•˜ëŠ” ì˜¤ë¸Œì íŠ¸. 
+
+
+ #### POJO
+ - Plain Old Java Object
+ - Java Bean
+ - getter, setter ë¡œ ì´ë£¨ì–´ì§„ value objectì„±ì˜ java bean
+ - ê·¸ê²ƒì€ í´ë˜ìŠ¤ ìƒì†ì„ ê°•ì œí•˜ì§€ ì•Šê³ , ì¸í„°í˜ì´ìŠ¤ êµ¬í˜„ì„ ê°•ì œí•˜ì§€ ì•Šìœ¼ë©°, ì• ë…¸í…Œì´ì…˜ ì‚¬ìš©ì„ ê°•ì œí•˜ì§€ ì•ŠëŠ”ë‹¤.
+   
+   
+ ```
+ public class SimpleBean {
+    private String name;
+    private String age;
  
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return this.name;
+    }
+ 
+    public void setAge(String age) {
+        this.age = age;
+    } 
+    public String getAge() {
+        return this.age;
+    }
+ 
+}
+ ```
+   
+ ## reference
+ - https://joonyon.tistory.com/18

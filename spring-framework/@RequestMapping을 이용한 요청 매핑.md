@@ -29,6 +29,7 @@ public class HomeController {
 ```
   
 ## 클래스와 메서드에 @RequestMapping 적용하기!!!!
+- jsp에서 메서드 요청을 하는데 컨트롤러 어노테이션아래 @reqeustmapping을 지정하지 않아 요청 메서드를 찾지 못해 에러가 있었다.. 이걸로 시간 소비함.. !
 - 컨트롤러와 메서드에 @RequestMapping 애노테이션을 모두 사용하면, 클래스에적용한 값과 메서드에 적용한 값을 조합해서 매핑될 경로를 결정한다.
     
 ```

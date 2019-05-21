@@ -29,6 +29,8 @@
 
     - vert.x의 대략적인 아키텍처
      
+![vert](https://user-images.githubusercontent.com/32521173/58098198-ffd6c980-7c13-11e9-96be-9b80f8b21b85.png)
+
     
 
 ## reference

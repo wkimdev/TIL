@@ -9,8 +9,21 @@
 
 
 ## 나의 경우 항상 헤깔리는 점
-- 내가 실수로 건들인 소스코드를 commit하거나 push하지 않고, master를 그대로 merge받고 싶다. 
+- 내가 실수로 건드린 소스코드를 commit하거나 push하지 않고, master를 그대로 merge?강제로 PUSH 받고 싶다. 
 - 그러면 수정한 부분만 찾아서 지우고, push받으면 되는데, 정신없이 건드린게 많을때는 그냥 강제로 엎어치기를 하고 싶은데 이럴땐 어떻게???
+  
+```
+git fetch --all
+git reset --hard origin/master
+```
+
+- https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
+  
+
+
+## head
+- 브랜치의 시작('HEAD')
+  
 
 
 ## reference 

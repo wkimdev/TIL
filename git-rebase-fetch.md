@@ -45,11 +45,18 @@ https://github.com/poormanY/test
 출처: https://poorman.tistory.com/113 [poorman]
 ```
 
+#### fetch와 pull의 명확한 차이  
+  
+```
+Fetch : 중앙 저장소의 소스를 로컬 저장소로 가져온다!  그러나 현재 작업중인 소스들을 변경하는 Merge 작업을 하지는 않는다
+Pull : 중앙 저장소의 소스를 로컬 저장소로 가져온다! 또한 현재 작업중인 소스들의 Merge 작업까지 통합하여 수행한다  
+```
+  
 ## head
 - 브랜치의 시작('HEAD')
   
 
-
+  
 ## reference 
 - https://backlog.com/git-tutorial/kr/stepup/stepup2_8.html 
 - https://backlog.com/git-tutorial/kr/stepup/stepup3_2.html

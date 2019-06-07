@@ -34,8 +34,6 @@ at com.uplus.music.adapter.AdapterImcscjTest.testImcschGetCLSuggestList(AdapterI
 - 컨트롤러 메소드 실행 직전에 수행됩니다. 
 - true 를 반환하면 계속 진행이 되고  false 를 리턴하면 실행 체인(다른 인터셉터, 컨트롤러 실행)이 중지되고 반환 됩니다. 
 - 필터의 응답 처리가 있다면 그것은 실행이 됩니다.
-
-출처: https://offbyone.tistory.com/33 [쉬고 싶은 개발자]
   
 - 오늘 어제도 삽질했네~~ 이런 삽질 언제쯤 멈추나 ㅠㅠ... 
 

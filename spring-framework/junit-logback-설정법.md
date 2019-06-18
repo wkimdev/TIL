@@ -30,8 +30,49 @@
 - 을 진행하였으나 run junit을 하여도 아무 로그파일이 남지 않는다.. 
 
 ## output file에 로그를 기록하는 방법  
-- 1. xml 설정 ? 잘 안되는 중 
-- 2. eclipse에서 run configuration -> common --> outputfile 설정 시도 
+- (1) xml 설정
+- (2) eclipse에서 run configuration -> common --> outputfile 설정 시도 
+
+#### spring boot 에서 간단하게 설정하는 법
+- application.yml에 로깅 file과 level설정
+  
+```
+#logging    
+logging:
+  file: /log/junitlog.log
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: INFO
+```
+
+- test코드  
+  
+```
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class LoggingTestApplicationTests {
+	
+	private static final Logger log = LoggerFactory.getLogger(LoggingTestApplicationTests.class); 
+	
+	@Test
+	public void contextLoads() {
+	}
+	
+	@Test
+	public void logTest() {
+		log.info("TEST LLLLLOGGGGGG~~!!!");
+	}
+
+}
+```
+- 이제, junit test실행 후, src/main/resources 하위 log폴더의 junitlog.log에 로깅메세지가 쫙 올라온다. 
+
+#### eclipse에서 run configuration -> common --> outputfile 설정!
+
+## 출처/방법
+- https://stackoverflow.com/questions/43043923/junit-console-output-to-log
 
 
   

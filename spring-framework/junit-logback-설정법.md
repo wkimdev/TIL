@@ -28,7 +28,12 @@
 </logger>
 ``` 
 - 을 진행하였으나 run junit을 하여도 아무 로그파일이 남지 않는다.. 
-  
+
+## output file에 로그를 기록하는 방법  
+- 1. xml 설정 ? 잘 안되는 중 
+- 2. eclipse에서 run configuration -> common --> outputfile 설정 시도 
+
+
   
 # 용어
 #### Appender 

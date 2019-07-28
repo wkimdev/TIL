@@ -18,7 +18,8 @@ java.lang.NullPointerException: null
   
 ## 의문
 - junit test 코드에서 적용해 호출하면 잘가져온다.   
-- dummy controller에서 호출시 뭔가 가로막는것 같은데 그게 뭔지 잘모르겠다.. 
+- dummy controller에서 호출시 뭔가 가로막는것 같은데 그게 뭔지 잘모르겠다..  
+- controller call 호출과의 차이가 뭐지?? 
   
 ```
 @Test

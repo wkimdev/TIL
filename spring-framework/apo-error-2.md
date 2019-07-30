@@ -30,6 +30,7 @@ java.lang.NullPointerException: null
 1. 프락시 메서드로 감싸진 getCLEpisodeList 
 2. invoke(ExposeInvocationInterceptor.java:92) 호출 
 ```  
+- 스프링 aop가 인터페이스를 이용해 프록시 객체를 생성... 
 
 #### 테스트 방법
 - 아래처럼 하는게 틀렸다고???

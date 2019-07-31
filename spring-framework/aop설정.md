@@ -6,6 +6,16 @@
 - 동적으로 프록시를 생성하는 방법.
   - 자바가 제공하는 방법은 인터페이스기반 프록시 생성.
   - CGIB는 클래스기반 프록시도 지원. 
+
+#### 현재설정 정보
+- 패키지 각각
+- aop
+  - loggingAdvice
+- intercepter 적용 
+  - mapparam
+  - payloadPrint
+  - palytype
+
   
 ## error message
 - java.lang.IllegalArgumentException: Can not set com.wkimdev.board.member.service.MemberService field com.wkimdev.board.member.controller.MemberController.memberSerive to com.sun.proxy.$Proxy2

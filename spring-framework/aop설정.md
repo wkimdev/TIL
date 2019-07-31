@@ -19,3 +19,6 @@
   
 ## error message
 - java.lang.IllegalArgumentException: Can not set com.wkimdev.board.member.service.MemberService field com.wkimdev.board.member.controller.MemberController.memberSerive to com.sun.proxy.$Proxy2
+
+#### reference 
+- https://loveiskey.tistory.com/116

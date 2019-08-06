@@ -5,7 +5,12 @@
 - @cacheable를 프로젝트에서 사용하는 거랑, aop랑 연관이 있네~ 
 - Aspect-oriendted programming(AOP)는 OOP를 보완하는 수단,흩어진 Aspect를 모듈화 할 수 있는 프로그래밍 기법
 - 비즈니스 로직이 아닌, 시스템의 성능을 높일 수 있도록 보안이나 로깅같은 공통 관심사를 표현하는 것. 
-
+  
+![image](https://user-images.githubusercontent.com/32521173/62545822-624b7780-b89d-11e9-86c8-1369b96b3028.png)  
+    
+![image](https://user-images.githubusercontent.com/32521173/62545984-a5a5e600-b89d-11e9-8a21-8a6fcad0fa57.png)
+  
+  
 # 주요용어 
 ## aspect
 - 모듈
@@ -17,7 +22,8 @@
 - 가장 흔하게 사용하는 애는, **메서드 실행 시점**
 - 메서드를 실행할때 끼워들 수 있는 지점. 
 - a라는 클래스에 b라는 메서드를 호출할때 지정해라 -> 구체적인 subject -> pointcut
-- 어떤 지점. 
+- 어떤 지점. 이라는 키워드로 생각하기. 
+  
 #### taget
 - 적용대상, 클래스 a,b,c
 

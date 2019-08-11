@@ -56,22 +56,14 @@
 ## proxy패턴   
 - a라는 타입의 proxy bean을 만든다.  
 - 이 proxy빈이 실제 a가 가지고 있는 foo라는 메서드 호출 직전 hello를 찍고, 그 다음 a를 호출한다.  
-       
+
+#### proxy패턴 문제점
+- 매번 프록시 클래스를 작성해야함?
+- 여러 클래스 메소드에 적용해야함?
+- 객체를 관계도 복잡시러워 지고... 
+==> 그래서 등장하게 된게 스프링 AOP!! 
   
-## 동적 프록시
-- 동적으로 프록시를 생성하는 방법.
-  - 자바가 제공하는 방법은 인터페이스기반 프록시 생성.
-  - CGIB는 클래스기반 프록시도 지원. 
-
-#### 현재설정 정보
-- 패키지 각각
-- aop
-  - loggingAdvice
-- intercepter 적용 
-  - mapparam
-  - payloadPrint
-  - palytype
-
+- 이어서 계속.. 
   
 ## error message
 - java.lang.IllegalArgumentException: Can not set com.wkimdev.board.member.service.MemberService field com.wkimdev.board.member.controller.MemberController.memberSerive to com.sun.proxy.$Proxy2

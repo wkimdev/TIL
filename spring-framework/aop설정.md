@@ -11,7 +11,18 @@
 ![image](https://user-images.githubusercontent.com/32521173/62545984-a5a5e600-b89d-11e9-8a21-8a6fcad0fa57.png)
   
   
-# 주요용어 
+# AOP 주요개념
+- Aspect와 Target
+- Advice
+- Join point와 Pointcut
+  
+# AOP 구현체
+- 여러 프로그래밍 언어에서의 aop구현.. (https://en.wikipedia.org/wiki/Aspect-oriented_programming)
+- 자바
+  * AspectJ (심화학습으로서 권장~)  
+  * 스프링 AOP (수업) 
+ 
+---
 ## aspect
 - 모듈
 #### advice
@@ -26,23 +37,19 @@
   
 #### taget
 - 적용대상, 클래스 a,b,c
-
-# aop구현체 
-- 각 언어별 구현체가 존재한다~ 
-  * 자바 
-      * AspectJ (심화학습~) 
-      * 스프링 Aop (수업) 
-   
-   
+  
+  
 ## aop적용방법(각각의 concern들을 어떻게 모듈화 할 것이냐~)  
 - 컴파일 (로드 타임 위버 설정~/성능상 문제 생길 수 있다는 단점... )   
 - 로드타임  
 - 런타임 (주로 spring aop사용 방법, 별도의 aop공부를 많이 할필요가 없다~ )   *현실적으로 가장 많이 쓰는 방법. 
-   
+  
+--- 
+    
 #### proxy기반 AOP 
 - a라는 타입의 proxy bean을 만든다.  
 - 이 proxy빈이 실제 a가 가지고 있는 foo라는 메서드 호출 직전 hello를 찍고, 그 다음 a를 호출한다.  
-   
+     
   
 ## 동적 프록시
 - 동적으로 프록시를 생성하는 방법.

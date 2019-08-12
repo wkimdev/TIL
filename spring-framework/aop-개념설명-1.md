@@ -56,7 +56,9 @@
 ## proxy패턴   
 - a라는 타입의 proxy bean을 만든다.  
 - 이 proxy빈이 실제 a가 가지고 있는 foo라는 메서드 호출 직전 hello를 찍고, 그 다음 a를 호출한다.  
-
+  
+![image](https://user-images.githubusercontent.com/32521173/62870973-8bfd1680-bd55-11e9-821a-03e5b442fd2a.png)
+  
 #### proxy패턴 문제점
 - 매번 프록시 클래스를 작성해야함?
 - 여러 클래스 메소드에 적용해야함?

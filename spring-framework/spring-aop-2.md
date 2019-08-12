@@ -23,6 +23,35 @@
   - palytype
 
 
+# 스프링 AOP : @aop
+- 애노테이션 기반의 스프링 aop
+  
+- 의존성 추가 
+  
+```
+spring-boot-starter-aop 
+```
+    
+#### 애스팩트 정의
+- @Aspect 
+- 빈으로 등록해야 하기 때문에 (컴포넌트 스캔을 사용한다면) @Component도 추가. 
+    
+#### 포인트컷 정의
+- @PointCut(표현식)
+- 주요 표현식
+  * execution
+  * @annotation
+  * bean
+- 포인트컷 조합
+  * &&, ||, !  
+
+#### 어드바이스 정의
+- @before
+- @AfterReturning
+- @AfterThrowing
+- @Around  
+  
+  
 # Reference
 - 백기선의 스프링 강의 참고!! 
   

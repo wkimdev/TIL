@@ -43,6 +43,15 @@ Lambda Create
 
 - 보통 파이선과 node.js를 많이 사용한다.
 
+## TODO
+- API Gateway
+- cloudWatch
+- step function
+- Lambda
+- Dynamo DB
+  
+
+
 
 #### 아래의 글도 더 자세히 읽어보면 좋을 것 같다. 
 - [AWS Lambda를 시작하기 전 알았으면 좋았을것](https://medium.com/harrythegreat/aws-lambda%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-%EC%A0%84-%EC%95%8C%EC%95%98%EC%9C%BC%EB%A9%B4-%EC%A2%8B%EC%95%98%EC%9D%84%EA%B2%83%EB%93%A4-788bd3b3bdd2)

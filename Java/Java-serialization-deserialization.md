@@ -19,6 +19,9 @@
 전송된 객체의 클래스와 원격지의 클래스와 동일한지 여부 체크를 해주는거에요.
 serialVersionUID 다를경우 java.io.InvalidClassException 을 발생합니다.
 (원격지에도 해당 클래스가 있어야지 객체를 사용할수있겠죠) 
+  
+- 정리하면 직렬화는 보통 파일 저장이나, 패킷 전송시에 '파싱할 수 있는 데이터를 만들기 위해' 사용됩  
 
+  
 ## reference
 - okky(https://okky.kr/article/224715) 

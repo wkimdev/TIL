@@ -80,7 +80,9 @@ Serverless: Run the "serverless" command to setup monitoring, troubleshooting an
 짠 하고 api가 만들어졌따~~
   
 - 배포하고 만들어진 API로 요청 후 응답을 확인해 볼 수 있다!!
-
+  
+![image](https://user-images.githubusercontent.com/32521173/67403450-e7b50d00-f5ec-11e9-8f13-f41dbb6c903d.png)
+  
    
 
 ## 출처

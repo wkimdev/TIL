@@ -1,7 +1,10 @@
 ## TODO
+  
+![image](https://user-images.githubusercontent.com/32521173/67501311-07b50100-f6bf-11e9-9a50-a9b32f38b9f6.png)
+  
 
-
-
+   
+   
 - [aws doc : API Gateway의 WebSocket API 소개](https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/apigateway-websocket-api-overview.html)
 - API Gateway에서 AWS 서비스(예: Lambda 또는 DynamoDB) 또는 HTTP 엔드포인트에 대한 상태 저장 프론트엔드로 WebSocket API를 만들 수 있습니다. 
 - WebSocket API는 클라이언트 애플리케이션에서 수신한 메시지의 내용을 기반으로 백엔드를 호출합니다.

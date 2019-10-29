@@ -57,10 +57,12 @@ if( response != null && response.length > 0 ){
 			// 맵핑 1번 
 			modelData.setData(data);
 		} else if(main){
+			// 맵핑 2번 (데이터 갯수만큼)
 			MainModel mainModel = new MainModel()
 			mainModel.setItem(data);
 			mainModels.add(mainModel);
 		} else if(footer){
+			// 맵핑 24번 (데이터 갯수만큼)
 			FooterModel footerModel = new FooterModel();
 			footerModel.setItem(data);
 			footerModels.add(footerModel);

@@ -10,10 +10,18 @@
 - data에 직접 접근이 가능하기 때문에, 컴포넌트 초기에 외부에서 받아온 값들로 data를 셋팅해야 하거나 `이벤트 리스너를 선언` 해야 한다면
 이 단계에서 하는 것이 가장 적절합니다.  
   * 앞으로 네이티브 이벤트를 리스너 하고 있는 부분은 무조건(native interface를 선언한 부분) created를 보고 먼저 판단해볼 수 있겠다.    
+
+---
   
 ## computed
-- 라이프사이클에 해당하지는 않지만. 
-- watcher... 
+- 고급 템플릿 기법으로서, computed 속성의 첫번째 장점은 data 속성 값의 변화에 따라 자동으로 다시 연산
+- 두 번째 장점은 캐싱
+
+## watch 속성
+- watch 속성은 데이터 변화를 감지해 자동으로 특정 로직을 수행
+- computed와 유사하지만, computed 속성은 내장 api를 활용한 간단한 연산 정도에 적합, watch 속성은 데이터 호출과 같이 시간이 상대적으로 
+더 많이 소모되는 비동기 처리에 적합... 
+ 
   
 ---
 
@@ -45,4 +53,5 @@ onst Login = {
 ## 출처
 - https://wormwlrm.github.io/2018/12/29/Understanding-Vue-Lifecycle-hooks.html 
 - computed 동작에 대한 좋은글~ https://mygumi.tistory.com/311
-
+- vuejs 입문 책 캡틴판교~
+  

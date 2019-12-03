@@ -14,9 +14,14 @@
 
 
 ## Flux란?
+   
+![image](https://user-images.githubusercontent.com/32521173/70055759-90f41780-161d-11ea-96bf-98803bd42b9b.png)
+      
 - MVC 패턴의 복잡한 데이터 흐름 문제를 해결하는 개발 패턴 (단방향 - 이미지!) - unidirectional data flow
 - ex) 뷰에선 부모 -> 자식 (props로 데이터 보냄)// 자식 --> 부모 (자식에서 부모에게 데이터를 보낼땐 event발생해서 보냄) //제한함-흐름 제어
-  
+   
+   
+
 ***  
   
 - 1. action : 화면에서 발생하는 이벤트 또는 사용자의 입력

@@ -40,3 +40,6 @@ navigator.vendor; // "Google Inc"
   
   
 # 전역객체
+
+## 참고
+- https://www.zerocho.com/category/JavaScript/post/573b321aa54b5e8427432946

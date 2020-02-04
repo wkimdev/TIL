@@ -1,6 +1,12 @@
 ## jquery event on off
 - jquery 통합 메서드 on() off()
 
+#### jquery 이벤트의 연결 및 처리 .on() .off() .one()
+- 이벤트의 연결(eventbinding)
+- 특정 요소에서 발생하는 이벤트를 처리하기 위해서는 `이벤트 핸들러(event handler)함수`를 작성해야 한다.  
+- 이렇게 작성된 이벤트 핸들러를 **특정 요소에 연결하는 것**을 `이벤트 바인딩(event binding)`이라고 한다.  
+- jquery는 이벤트 바인딩을 위해 다양한 방법을 제공한다. 
+  
 #### event on()예제
    
 ```
@@ -35,4 +41,5 @@ $('#test').off('click')
 ## reference
 - https://webisfree.com/2014-01-03/[jquery]-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%86%B5%ED%95%A9-%EB%A9%94%EC%84%9C%EB%93%9C%EC%9D%98-%ED%99%9C%EC%9A%A9-on()-off()
 - [jquery 성능 향상시키는 방법](http://codefactory.kr/2011/12/07/jquery-performance-tips-and-tricks/) 
+- http://www.devkuma.com/books/pages/232   (깔끔하게 정리 잘되어 있음) 
   

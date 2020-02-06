@@ -66,7 +66,7 @@ eventBus.$emit('refresh', refresAction);
 - 3. 여러 개의 컴포넌트에서 같은 데이터를 업데이트 할 때 동기화 문제
 
 # vuex 컨셉
-- state : 컴포넌트 간에 공유하는 데이터 data()
+- **state : 컴포넌트 간에 공유하는 데이터 data()** 
 - view : 데이터를 표시하는 화면 template
 - action : 사용자의 입력에 따라 데이터를 변경하는 methods  
 - ***단방향!!! 이라는걸 기억하기!!!!***

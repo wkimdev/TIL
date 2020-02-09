@@ -48,6 +48,23 @@
 - Easy
 - Progressive
 
+## Vuejs concept
+- PWA 기반, single page app(SPA)을 제작하기 위한, 화면 앞단 라이브러리 Vue.js.
+- PWA : **Progressive Web Apps** 의 약자. 관련 내용은 [https://joshua1988.github.io/web-development/opinions/where-are-we-and-where-are-we-heading/](https://joshua1988.github.io/web-development/opinions/where-are-we-and-where-are-we-heading/) 참고
+- vue의 주요 구성요소**(component, router, resource, templates)**
+
+### 2. pattern
+
+Vue.js는 **MVVM 패턴**에서 ViewModel 계층에 초점을 둔 프레임워크이다. 뷰모델을 통해서 **양방향 데이터 바인딩**이 가능하게 해주며, **뷰 계층을 좀 더 간단하고 유연하게 디자인하게 해준다.**
+
+- 뷰모델(ViewModel)은 모델(Model)과 뷰(View)사이에 인터페이스 역할
+
+![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d986db31-b1fc-46ee-87b3-cfd07f42a36d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d986db31-b1fc-46ee-87b3-cfd07f42a36d/Untitled.png)
+
+### 3. data processing
+
+- Component 간 통신의 기본 골격은 React의 **1way data flow**(부모 -> 자식)와 유사
+
 ## reference
 - doit vue.js입문/장기효/vuejs소개
 - https://www.slideshare.net/ToshiroShimizu/progressive-framework-vuejs-20

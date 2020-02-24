@@ -1,3 +1,37 @@
+~~~
+var a =10;
+a
+10
+window.a
+10
+> this
+Window {parent: Window, opener: null, top: Window, length: 0, frames: Window, …}
+~~~
+- 최상단에는 윈도우 객체가 있다. 
+
+~~~
+## 함수내에서 전역 호출
+function sum(a,b){
+	console.log(this)
+	return a+b;
+}
+
+## 생성자 호출 
+function Vue(el) { console.log(this); this.el = el; }
+new Vue('#app');
+Vue {}el: "#app"__proto__: Object
+Vue {el: "#app"}
+
+## 비동기처리 this
+바인딩을 계속 해줘야 하는 번거로움을 해소하기 위해 화살표 함수를 쓰게 된다. 
+var vm = this;
+...
+화살표 함수를 이용해 컴포넌트의 this를 그대로 가져오기 
+~~~
+   
+  
+
+
 # 함수 호출 패턴에 따라 결정되는 this.
 - 자바스크립트 함수는 호출될 때, 매개변수로 전달되는 인자값 이외에, 'argument' 객체와 'this'를 암묵적으로 전달받는다.
 - 자바스크립트의 경우 java와 같이 this에 바인딩되는 객체는 한가지가 아니라 해당 함수 호출 방식에 따라 this에 바인딩 되는 객체가 달라진다.

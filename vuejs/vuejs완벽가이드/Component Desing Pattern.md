@@ -1,2 +1,0 @@
-# Component Design Patterns 
-  

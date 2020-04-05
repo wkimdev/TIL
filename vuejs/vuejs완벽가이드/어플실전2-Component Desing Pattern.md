@@ -34,6 +34,7 @@
 
 
 #### 4. Renderless Component 
+- template이 없는 컴포넌트 
 - 표현을 하지 않는 컴포넌트 => script만 있는 컴포넌트!!! 
   * (프로젝트에 있었는데 이게 이런 이유가 있었구나.. => MIMSContentBase같은 것)
 - created()에서 api를 호출하고 응답받는 패턴을 없애고,그 데이터 fetch역할만 하는 컴포넌트를 만들어 구현할 수 있게 한 것.   

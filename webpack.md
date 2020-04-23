@@ -21,4 +21,36 @@ module.exports = {
   
 ```
   
+#### 웹팩의 주요 속성 4가지
+- mode가 3과 4의 차이
 
+#### entry
+- 진입점
+- 변환, 빌드, 컴파일, 번들링 => 같은 말 
+
+#### output
+- 결과물
+- 웹팩을 돌리고 난 결과물의 파일 경로를 의미. 
+- Output 파일 이름 옵션을 지정할 수 있다. 예를 들어 아래처럼 지정하면, 해시 값을 붙여 생성해 사용자가 새로고침을 하지 않더라도(캐시 되지 않도록) 설정해 준다. 
+   
+```
+module.exports = {
+  output: {
+    filename: '[chunkhash].bundle.js'
+  }
+};
+```
+  
+#### loader
+- 자바스크립트 파일이 아닌 웹자원(html, css, image, font 등)들을 변환할 수 있도록 도와주는 속성. 
+
+#### 실습 ing
+- 두 번째 튜토리얼 - 로더가 없는 경우의 에러 확인과 css 로더 적용
+- javascript안에 css가 들어갈 수 없다. 
+- 빌드 후 에러는 안났지만, 왜 p tag에 style이 적용되지 않았을까?? next episode... 
+
+#### plugin
+  
+## 출처
+- 인프런 webpack 캡틴판교~
+  

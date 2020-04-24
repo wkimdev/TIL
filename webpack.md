@@ -49,6 +49,12 @@ module.exports = {
 - javascript안에 css가 들어갈 수 없다. 
 - 빌드 후 에러는 안났지만, 왜 p tag에 style이 적용되지 않았을까?? next episode... 
 
+#### 웹팩 로더 적용 순서와 style-loader
+- 오른쪽에서 왼쪽으로 적용
+- Sass-loader : css를 효율적으로 작성할 수 있도록 도와주는 프로그램. 
+- 기존의 css의 유지보수의 불편함 등을 sass를 사용하여 해결 할 수 있다. 
+- mode는 웹팩 4버전 이후 적용 된 것. 
+
 #### plugin
   
 #### 출처

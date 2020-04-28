@@ -4,8 +4,8 @@
 - 자바는 객체를 입출력할 수 있는 두 개의 보조 스트림 objectInputStream, objectOutputStream제공 
 
 ## 직렬화, 역직렬화 
-- 직렬화 : '객체'를 출력하기 위해 객체의 데이터(필드값)를 일렬로 늘어선 '바이트'로 변경
-- 역질렬화 : '연속적인 바이트'를 '객체'로 복원하는 것을 역직렬화(deserialization)이라고 한다.
+- 직렬화 : `'객체'`를 출력하기 위해 객체의 데이터(필드값)를 `일렬로 늘어선 '바이트'`로 변경 (ex: rO0ABXNyABdjb20uZXhhbXBsZS5kZW1vLk1lbWJlchrvGcR0ZqT8AgADSQADY....) 
+- 역질렬화 : `'연속적인 바이트'를 '객체'로 복원`하는 것을 역직렬화(deserialization)이라고 한다.
 
 ## 직렬화가 가능한 클래스(serializable)
 - 자바는 serializable 인터페이스를 구현한 클래스만 직렬화할 수 있도록 제한하고 있다. 

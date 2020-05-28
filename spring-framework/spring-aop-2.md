@@ -50,7 +50,22 @@ spring-boot-starter-aop
 - @AfterReturning
 - @AfterThrowing
 - @Around  
-  
+
+
+### AOP 설정
+- 표현식 예제
+```java
+<aop:config>
+    <aop:pointcut id="allPointcut" expression="execution(* io.icednut.spring.exercise..*Impl.*(..))"/>
+    <aop:aspect ref="log">
+        <aop:before pointcut-ref="allPointcut" method="printLog"/>
+    </aop:aspect>
+</aop:config>
+```
+- allPointcut이라는 포인트컷은 io.icednut.spring.exercise 란는 패키지로 시작하는 클래스 중 Impl로 끝나는 클래스의 모든 메소드를 포인트컷으로 설정, 애스펙트 설정에서 app:before 엘리먼트의 **pointcut-ref** 속성으로 포인트컷을 참조.
+- http://closer27.github.io/backend/2017/08/03/spring-aop/
+
+
   
 # Reference
 - 백기선의 스프링 강의 참고!! 

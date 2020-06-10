@@ -6,6 +6,19 @@
 #### contentsEquals
 - 내용(문자순서)만 비교하고 string 인스턴스인 것 까지 확인하지 않음. 
 - 즉, String 객체를 StringBuffer / StringBuilder / Char Array 객체들과 비교 가능
+   
+```
+		String str = "abc";
+		String str2 = "abc";
+		StringBuffer str3 = new StringBuffer("abc");
+		
+		System.out.println(str.equals(str2)); //true
+		System.out.println(str.equals(str3));	// false
+		
+		System.out.println(str.contentEquals(str2)); // true
+		System.out.println(str.contentEquals(str3));	// true
+```
+  
 
 #### `==`
 - 단순한 비교연산자로서 주소값으로 비교한다. 

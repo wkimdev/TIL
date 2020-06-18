@@ -32,3 +32,20 @@
 
 
 ```
+  
+#### 6. Apache Commons에서 제공하는 StringUtils 사용하기 
+  
+```
+// 6. Apache Commons에서 제공하는 StringUtils 사용하기 
+		
+System.out.println(StringUtils.isEmpty(null)); // true
+System.out.println(StringUtils.equals("1", null)); // true
+System.out.println(StringUtils.equals(null, "1")); // true
+System.out.println(StringUtils.indexOf("1", null)); // true
+System.out.println(StringUtils.indexOf(null, "1")); // true
+System.out.println(StringUtils.upperCase(null)); // null
+
+String b = null; 
+System.out.println(b.indexOf("갓")); // NPE 발생
+```
+  

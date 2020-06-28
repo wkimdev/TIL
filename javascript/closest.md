@@ -1,0 +1,2 @@
+- 기준 Element 에서부터 closest() 메소드를 통해 자신부터 부모 요소 단위로 출발하여 각 요소가 지정한 선택자에 만족할 때까지 탐색한다(문서 루트까지 이동). 
+- https://developer.mozilla.org/ko/docs/Web/API/Element/closest

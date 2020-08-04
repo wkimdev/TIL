@@ -32,9 +32,10 @@ Access to resource at 'http://localhost:8080/my/events' from origin
 
 ### 시도해본 방법
 - eventpublish 사용 해봄?!
-- 기타... 집중이 어렵당 이걸 하고 있어도 되나... 
+- 기타...
   
   
 ### 낼 시도해볼 방법 
 - 샘플 코드 처럼 emitter를 ConcurrentHashMap에 넣어두고 값이 변경 되었을 경우 `send()`를 다시 시켜보자. 그럼 메세지가 갈까????  제발.. 🙏 제발 🙏 🥺 
+- https://wedul.site/157 
   

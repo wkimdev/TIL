@@ -42,7 +42,12 @@ Access to resource at 'http://localhost:8080/my/events' from origin
 - 비동기로 메세지를 전달하면서... 뭔가 병목현상?이 발생한 것 같은데 정확한 원인을 못 찾겠다. 
 - 비동기... 
   
-
+### 시도해보기
+- sseemitter에 타임아웃을 설정해놓기 
+  - https://stackoverflow.com/questions/29880336/spring-sseemitter-causes-cannot-forward-after-response-has-been-committed-except
+  
 ### 잡담 
 - 처음엔 cors 이슈 정리를 하려고 시작했는데 어느순간 sse 처리하면서 발생한 이슈를 낙서하게 되는 노트...   
-
+- 로그인을 이런식으로 처리해도 될까... 
+  
+  

@@ -28,6 +28,12 @@ Access to resource at 'http://localhost:8080/my/events' from origin
 - sse 를 프론트와 서버 연결 시도는 성공했다!!
 - 하지만 login 값이 변경 되었을 경우 (즉, 데이터가 변경되는 시점에) 변경된 데이터가 프론트로 전달되지 않았다.. 디버깅을 해봐도 코드는 잘타는데 데이터가 전달이 되지 않았다. 
   
+### 시도해본 방법 & 해결
+- eventpublish 사용 해봄?! => 해당 사항 없음 
+- 샘플 코드 처럼 emitter를 ConcurrentHashMap에 넣어두고 값이 변경 되었을 경우 `send()`를 다시 시켜보니 메세지가 전달된다. 
+- https://wedul.site/157 
+   
+   
 ### 이슈3
 - 서버에서 로그인 시점에 send()를 시킬때 메세지가 전달이 될때가 있고 안될 때가 있다. 
 - 또한 처음 연결하는 시점에 응답 속도가 3초 이상이 걸리는 것 같다... 그리고 한번에 되지 않는다. 
@@ -36,10 +42,6 @@ Access to resource at 'http://localhost:8080/my/events' from origin
 - 비동기로 메세지를 전달하면서... 뭔가 병목현상?이 발생한 것 같은데 정확한 원인을 못 찾겠다. 
 - 비동기... 
   
-### 시도해본 방법
-- eventpublish 사용 해봄?! => 해당 사항 없음 
-- 샘플 코드 처럼 emitter를 ConcurrentHashMap에 넣어두고 값이 변경 되었을 경우 `send()`를 다시 시켜보니 메세지가 전달된다. 
-- https://wedul.site/157 
 
 ### 잡담 
 - 처음엔 cors 이슈 정리를 하려고 시작했는데 어느순간 sse 처리하면서 발생한 이슈를 낙서하게 되는 노트...   

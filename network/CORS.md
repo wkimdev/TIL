@@ -41,7 +41,12 @@ Access to resource at 'http://localhost:8080/my/events' from origin
 - 클라이언트단에서 확인해보니 event를 수신하고 있는데 waiting...이런게 떴었다. 
 - 비동기로 메세지를 전달하면서... 뭔가 병목현상?이 발생한 것 같은데 정확한 원인을 못 찾겠다. 
 - 비동기... 
-  
+
+### 이슈4
+- timeout 설정 후 어제보단 send가 잘되는 것 같다. 
+- 빌드 후에 앱에서 테스트 해 본 결과...  쀼에서 만든 이벤트버스가 들어가지 않는다. 
+- 타겟 url을 수정해서 다시 시도해봐야겠다. 잠시 전에는 그 생각이 안들었다. 
+    
 ### 시도해보기
 - sseemitter에 타임아웃을 설정해놓기 
   - https://stackoverflow.com/questions/29880336/spring-sseemitter-causes-cannot-forward-after-response-has-been-committed-except

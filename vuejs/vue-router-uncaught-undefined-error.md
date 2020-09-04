@@ -28,4 +28,31 @@ vue-router.esm.js:1958 Uncaught (in promise) Error: Navigation aborted from "/ho
 - 3. 문제의 확장으로.. 경로 변경이 발생하고 **결과 구성 요소가 promise가 해결되기 전에 .push() 이벤트에서 데이터를 읽으려고 하면** 이 오류가 발생될 수 도 있다. await를 사용해서 읽기 전에 어플리케이션을 대기 하도록 
 지시하여 이와 같은 오류를 중지시킬 수도 있다.
 
+#### 조사해봐야 할 2가지
+- 1. this.$router.push()가 실행되는 동안 어떻게든 컴포넌트가 destorying 혹은 creating을 하는지?
+- 2. 다음 컴포넌트가, 라우트 변경 완료가 되기 전에 라우트 파라미터(매개변수)에 대한 데이터를 읽을 수 있는지?? 
+
+- 이 중 일부가 발생할 수 있음을 발견하면 데이터 흐름을 고려하고 오류를 억제하는 것뿐만 아니라 비동기 동작을 길들이는 방식으로 문제를 해결하라~
+- 디버깅 중에 console.log ()를 모든 구성 요소의 생성 / 마운트 및 삭제 된 **수명주기 메서드**와 **경로 변경**과 관련된 함수에 추가합니다. **데이터가 흐르는 방식을 파악할 수 있어야합니다.** 
+- 이 문제의 본질은 라우트의 변경중에 this.$route.params 의 downstream usage에서 오는 것 같다~. Add lots of console.logs and/or step through a debugger.
+- 예시로든 해결 방법?
+```
+// 1
+handleSomething() {
+    this.$router.push({}).catch((err) => {
+        throw new Error(`Problem handling something: ${err}.`);
+    });
+},
+
+// 2
+async handleSomething() {
+    try {
+        await this.$router.push({});
+    } catch (err) {
+        throw new Error(`Problem handling something: ${err}.`);    
+    }
+},
+  
+```
+   
 

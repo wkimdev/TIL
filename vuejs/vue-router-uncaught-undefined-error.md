@@ -59,4 +59,4 @@ async handleSomething() {
 - vue-router version up
 - next(false)를 beforerouterenter에서 테스트 
 - try catch문 안에서 done값이 어떻게 들어오는지, 확인 등.. 
-  
+- sample code에서 재현되는걸 발견!  

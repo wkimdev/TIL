@@ -60,3 +60,8 @@ async handleSomething() {
 - next(false)를 beforerouterenter에서 테스트 
 - try catch문 안에서 done값이 어떻게 들어오는지, 확인 등.. 
 - sample code에서 재현되는걸 발견!  
+- vur-router 공식 git에서 아래 글을 보고 일차적으로 에러가 나지 않도록 처리 했다. 하지만,,,같은 npm version(ver-router:3.0.1)에서 왜 한쪽에서만 navigation aborted에러가 났었는지는 ....
+정확히 알지 못해 찜찜함이 남는다. 하지만 앞으로 해야할 일이 더 남아있기에 일단 일차적으로 해결하고 종료하기로 했다. 
+https://github.com/vuejs/vue-router/issues/2881#issuecomment-520554378  
+
+  

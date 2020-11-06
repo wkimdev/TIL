@@ -46,7 +46,6 @@ If the array really does contain the data you think it contains then you'd use i
   - Mutations 는 동기적 로직을 정의
   - Actions 는 비동기적 로직을 정의
   - Mutations 의 성격상 안에 정의한 로직들이 순차적으로 일어나야 각 컴포넌트의 반영 여부를 제대로 추적할 수가 있기 때문이다.
-```
   
 ## 해결 방법 
 - mutations에서 비동기로 호출하던 로직을 빼고, 비동기 호출 후 데이터를 완전히 다 받아온 시점에서 호출 하도록 변경 중.  

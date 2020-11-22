@@ -27,6 +27,9 @@ const height = this.$parent.$refs.commentBox.$el.offsetTop
  ```
  const relativeTop = element.getBoundingClientRect().top;
  ```
+ - (3) 아래 예시를 참고해서 조금씩 밀어내보면.. 안되겠구나 ㅠㅠ 안드로이드는 잘 되니까...
+ https://stackoverflow.com/questions/46102020/offset-returns-different-values-in-mobile-browsers
+   
     
 #### 참조
 - [Difference between getBoundingClientRect().top and offsetTop?](https://stackoverflow.com/questions/44172651/difference-between-getboundingclientrect-top-and-offsettop)  

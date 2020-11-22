@@ -27,7 +27,9 @@ const height = this.$parent.$refs.commentBox.$el.offsetTop
   
   
 #### 참조
-- https://mommoo.tistory.com/85
+- [Difference between getBoundingClientRect().top and offsetTop?](https://stackoverflow.com/questions/44172651/difference-between-getboundingclientrect-top-and-offsettop)  
+- https://mommoo.tistory.com/85  
+  
   
 
 

@@ -23,9 +23,11 @@ const height = this.$parent.$refs.commentBox.$el.offsetTop
 ## 조치해볼 것 
 - (1) 플레이어 영역 대략(57-8 px?값을) 직접 빼서 스크롤까지의 길이를 계산해보기.
     => 사실 이건 어떻게 해야할지 감이 잘 안잡힌다. 
-- (2) getBoundingClientRect 를 사용해보기? 
-  
-  
+- (2) getBoundingClientRect 를 사용해보기?   
+ ```
+ const relativeTop = element.getBoundingClientRect().top;
+ ```
+    
 #### 참조
 - [Difference between getBoundingClientRect().top and offsetTop?](https://stackoverflow.com/questions/44172651/difference-between-getboundingclientrect-top-and-offsettop)  
 - https://mommoo.tistory.com/85  

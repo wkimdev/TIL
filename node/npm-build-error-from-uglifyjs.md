@@ -40,6 +40,8 @@ Unexpected token: name (result) [./node_modules/asn1.js/lib/asn1/base/node.js:28
 
 #### (2) Babelify를 사용해보기
 - 시도해보는 중 
+- babel 적용이 제대로 된건지 확인하게 위해 이 글을 좀 더 읽어보자 => https://velog.io/@pop8682/%EB%B2%88%EC%97%AD-%EC%99%9C-babel-preset%EC%9D%B4-%ED%95%84%EC%9A%94%ED%95%98%EA%B3%A0-%EC%99%9C-%ED%95%84%EC%9A%94%ED%95%9C%EA%B0%80-yhk03drm7q
+
 
 #### (3) webpack.optimize.UglifyJsPlugin 를 선언한 방식이 문제일 수도 있다?
 => 변경해보았으나 여전이 오류 발생.         

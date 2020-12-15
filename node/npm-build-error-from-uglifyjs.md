@@ -38,7 +38,10 @@ Unexpected token: name (result) [./node_modules/asn1.js/lib/asn1/base/node.js:28
 #### (1) try installing babel-preset-env and adding presets": [ "env" ] to your webpack.config.js or babelrc.
 => 설치 후 적용해보았으나 여전히 오류 발생. 
 
-#### (2) webpack.optimize.UglifyJsPlugin 를 선언한 방식이 문제일 수도 있다?
+#### (2) Babelify를 사용해보기
+- 시도해보는 중 
+
+#### (3) webpack.optimize.UglifyJsPlugin 를 선언한 방식이 문제일 수도 있다?
 => 변경해보았으나 여전이 오류 발생.         
 ```
   new UglifyJSPlugin({
@@ -50,7 +53,7 @@ Unexpected token: name (result) [./node_modules/asn1.js/lib/asn1/base/node.js:28
     }),
 ```
   
-#### (3) terser-webpack-plugin를 적용해보기. 
+#### (4) terser-webpack-plugin를 적용해보기. 
 - 적용해봤더니 `TypeError: Cannot read property 'compilation' of undefined` 라는 오류가 발생;; 
    
 ```

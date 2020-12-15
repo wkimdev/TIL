@@ -65,6 +65,7 @@ TypeError: Cannot read property 'compilation' of undefined
 ```
 
 - 다시 서칭해보니 webpack4 로 업그레이드 하라는 몇몇 답변을 확인했으나 webpack4로 맘대로 업그레이드 할 수 있는 상황이 아니다;; 
+https://stackoverflow.com/questions/49347715/uglifyjs-unexpected-token-error
 
 
 

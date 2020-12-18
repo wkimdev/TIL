@@ -70,7 +70,7 @@ TypeError: Cannot read property 'compilation' of undefined
 https://stackoverflow.com/questions/49347715/uglifyjs-unexpected-token-error
 
 
-#### (5) terser-webpack-plugin를 적용해보기. 
+#### (5) uglify-js 3버전으로 변경 적용해보기. 
 - package.json에 설치된 ugilfy js는 `“uglify-es”: “^3.1.3”,/` 이었는데 이를 호환이 가능한 uglify-js 3버전으로 변경. 
 - 그래도 오류는 여전함.. 
 

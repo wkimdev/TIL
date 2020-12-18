@@ -21,7 +21,7 @@ Unexpected token: name (result) [./node_modules/asn1.js/lib/asn1/base/node.js:28
 #### 기본 개념 서칭 
 ## Uglify가 뭘까? 
 - [Uglify란? UglifyJS is a JavaScript parser, minifier, compressor and beautifier toolkit.](https://github.com/mishoo/UglifyJS)
-- Uglify는 ES6를 구문 분석 할 수 없으며 구문 오류가 발생합니다. 
+- Uglify는 ES6를 구문 분석 할 수 없으며 구문 오류가 발생합니다. (es5로 해석할 수 있는 transfiler가 필요-바벨 같은)
 - TypeScript를 ES5를 대상으로 설정하거나 생성 된 JS를 babel로 후 처리하거나 다른 축소기를 사용하십시오.
   - 하지만 이미 프로젝트 내부에 babel이 있는데 해당 오류가 왜 발생하지??? 
 
@@ -70,6 +70,9 @@ TypeError: Cannot read property 'compilation' of undefined
 https://stackoverflow.com/questions/49347715/uglifyjs-unexpected-token-error
 
 
+#### (5) terser-webpack-plugin를 적용해보기. 
+- package.json에 설치된 ugilfy js는 `“uglify-es”: “^3.1.3”,/` 이었는데 이를 호환이 가능한 uglify-js 3버전으로 변경. 
+- 그래도 오류는 여전함.. 
 
 
 

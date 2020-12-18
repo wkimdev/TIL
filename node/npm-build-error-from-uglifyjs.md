@@ -74,6 +74,18 @@ https://stackoverflow.com/questions/49347715/uglifyjs-unexpected-token-error
 - package.json에 설치된 ugilfy js는 `“uglify-es”: “^3.1.3”,/` 이었는데 이를 호환이 가능한 uglify-js 3버전으로 변경. 
 - 그래도 오류는 여전함.. 
 
+### (6) uglifyjs-webpack-plugin를 다시 설치해서 설정해보기. 
+- 아래 글을 참고로 다시 설정
+- https://codereviewvideos.com/blog/how-i-fixed-uglifyjs-unexpected-token-name-dropin/
+  
+```
+compiler.hooks.compilation.tap(plugin, compilation => {
+                   ^
+TypeError: Cannot read property 'compilation' of undefined
+    at UglifyJsPlugin.apply (/Users/medialog/lguplus/LG_Uplus_Music_Concert/src/front/node_modules/uglifyjs-webpack-plugin/dist/index.js:328:20)
+```
+  
+
 
 
 

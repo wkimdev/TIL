@@ -6,6 +6,17 @@
 ERROR in static/js/vendor.364dbe9e2be06e50df5d.js from UglifyJs
 Unexpected token: name (result) [./node_modules/asn1.js/lib/asn1/base/node.js:282,0][static/js/vendor.364dbe9e2be06e50df5d.js:30971,6]
 ```
+#### 에러를 해석해보자
+- node_modules내 설치된 asn1.js패키지내 파일에 예상치 못한 name(result)라는게 있따. 
+- 해당 부분의 코드로 찾아들어가면 아래와 같다. 
+- 저 부분의 es6 선언이 문제인걸까???  
+```
+let result = state['default'];
+```
+
+
+
+
 
 #### 이슈가 발생한 환경
 - 맥에서 발생. npm과 node버전은 업무용 윈도우pc와 동일한 버전임
@@ -69,6 +80,7 @@ TypeError: Cannot read property 'compilation' of undefined
 - 다시 서칭해보니 webpack4 로 업그레이드 하라는 몇몇 답변을 확인했으나 webpack4로 맘대로 업그레이드 할 수 있는 상황이 아니다;; 
 https://stackoverflow.com/questions/49347715/uglifyjs-unexpected-token-error
 
+==> 다운그레이드하래!!! 오마이갓.... 왜 이걸 못 읽었지 
 
 #### (5) uglify-js 3버전으로 변경 적용해보기. 
 - package.json에 설치된 ugilfy js는 `“uglify-es”: “^3.1.3”,/` 이었는데 이를 호환이 가능한 uglify-js 3버전으로 변경. 
